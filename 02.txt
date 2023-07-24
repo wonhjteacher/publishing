@@ -56,3 +56,5 @@ a , b, strong , em, i , input .....  인라인 태그
 :focus   포커스(커서)가 들어 갔을 때 
 
 
+=========================
+  list-style-type 리스트 ul , ol 모양 수정 
