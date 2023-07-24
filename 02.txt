@@ -1,0 +1,27 @@
+border 외곽선 
+border-left:1px #f00 solid; 
+border-right:
+border-top:
+border-bottom:
+border: 1px #f00 solid; 
+
+border-top-color:
+border-top-style:
+border-top-width: 
+
+=========================
+padding 요소 포함되는 안쪽여백 
+padding:10px 
+padding:10px 20px  => 상하 10 좌우 20 
+padding:10px 20px 30px => 상10 좌우 20 하 30
+padding:10px 20px 30px 40px => 상10 우20 하30 좌40
+padding-left
+padding-right 
+padding-top
+padding-bottom 
+
+=========================
+margin 요소와 요소 사이의 간격 
+==============================
+width :  100px 
+height  : 50px 

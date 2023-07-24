@@ -63,7 +63,7 @@ css
 
  선택자{속성:값;속성:값;속성:값}
 
- 문자속성 
+  문자속성 
   배경속성
   마진 
   패딩 
@@ -74,11 +74,11 @@ css
   트랜지션 
 
   문자관련 
-  color:문자색  hex#ff0099  rgb(255,255,255) rgba(255,255,255,.75),
+ color:문자색  hex#ff0099  rgb(255,255,255) rgba(255,255,255,.75),
  font-size: 16px  
-  font-family: '서체명'
+ font-family: '서체명'
  font-style:italic,noraml
-  font-weight: bold,400,500,600,700,800,
+ font-weight: bold,400,500,600,700,800,
  line-height:행간 24px 1.5
  letter-spacing : 글자사이간격-1px 
  word-spacing : 단어사이 간격 
