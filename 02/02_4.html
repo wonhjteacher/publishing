@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-image: url(image/fortune1.png); 
+            background-attachment: fixed; */
+        }
+       .box{
+        width: 450px;height: 300px;
+        margin: 20px;padding: 30px;
+        border:5px dotted red;
+        } 
+        .box1{
+            background-color: green;
+        }
+        .box2{
+            background-image: url(image/card1.jpg);
+            background-repeat: no-repeat;
+            background-color: bisque;
+            background-position: right 20px bottom 50px;
+        }
+        .box3{
+            background-image: url(image/card1.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .box4{
+            background-image: url(image/dog/dog2.jpg);
+            background-size: 150px;
+            background-color: brown;
+            background-origin: padding-box;/* 시작점 설정*/
+            background-clip: padding-box;/* 보여지는 영역설정 */
+        }
+        .icon{
+            background: url('image/daum.png') no-repeat -135px 0;
+            width: 14px;
+            height: 14px;
+        }
+        .loginbtn{
+            background: url('image/daum.png') no-repeat 0 -145px;
+            width: 236px;
+            height: 52px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div.box.box${박스$}*4 -->
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+    <div class="icon"></div>
+    <div class="loginbtn"></div>
+</body>
+</html>
