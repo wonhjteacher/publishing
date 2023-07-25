@@ -1,0 +1,14 @@
+레이아웃 
+float 
+position 
+
+flex 
+gird 
+
+=========================
+
+overflow  :  설정한영역보다 안에 넣은 컨텐츠가 넘쳤을때 처리 방법 
+overflow : visible , hidden ,scroll , auto 
+
+float:left / right 
+clear:left / right / both  :  아래 있는 요소가 상위요소가 float 됨으로 위치가 끌려올라오는것을 해제 해주는것 
