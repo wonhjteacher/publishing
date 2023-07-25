@@ -1,0 +1,46 @@
+
+flex 
+
+ 부모 컨테이너에 설정 할 수 있는 속성들 
+ display: flex / inline-flex 
+ flex-direction:row , row-reverse , column column-reverse
+ flex-wrap: wrap nowrap wrap-reverse
+ flex-flow:  flex-direction값    flex-wrap값
+ justify-content: flex-start , flex-end , center , space-between ,space-around
+ align-items: flex-start , flex-end , center , stretch , baseline 
+ align-content : flex-start , flex-end ,center , stretch  , sapce-between ,space-around
+
+
+자식 item 에 설정 할 수 있는 속성들 
+
+oder : 순서 정수로  
+flex-grow  :  0 기본 
+flex-shrink : 1 기본 
+flex-basis : auto 기본 
+flex : grow shrink  basis;
+========================
+flex : 1 1 50px
+flex : 0 1 100px
+flex : 1 => 1 1 0  
+flex: 1 50px => 1 1 50px 
+flex : 1 2;  => 1 2 0 ;
+flex : 50px => 1 1 50px
+flex : none  => 0 0 auto 
+flex : initial => 0 1 auto 
+flex : auto =>  1 1 auto 
+==============================
+align-self : flex-start , flex-end ,stretch, center ,baseline  , auto (기본값) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
