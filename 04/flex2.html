@@ -12,18 +12,31 @@
             background-color: #ccc;
             border:5px solid #000;
             margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            /*  flex-flow: row wrap; */
         }
         .wrap>div{
            width:100px;height: 100px;
         }
+
+        .wrap1{align-content:flex-start}
+        .wrap2{align-content:flex-end}
+        .wrap3{align-content:center}
+        .wrap4{align-content:space-between}
+        .wrap5{align-content:space-around}
 
         .wrap>div:nth-child(1){background-color: red;}
         .wrap>div:nth-child(2){background-color: green;}
         .wrap>div:nth-child(3){background-color: blue;}
         .wrap>div:nth-child(4){background-color: yellow;}
         .wrap>div:nth-child(5){background-color: pink;}
-
-        
+        .wrap6{
+            align-items: baseline;
+        }
+        .wrap6>div:nth-child(1){height: 100px;font-size: 50px;}
+        .wrap6>div:nth-child(2){height: 150px;}
+        .wrap6>div:nth-child(3){height: 80px;}
     </style>
 </head>
 <body>
@@ -62,6 +75,11 @@
         <div>3</div>
         <div>4</div>
         <div>5</div>
+    </div>
+    <div class="wrap wrap6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
     </div>
 </body>
 </html>
