@@ -42,7 +42,14 @@
             transition-delay: 0s,0.5s ;
        }
         .wrap2{height: 500px;background-color: aquamarine;padding-top: 65px;box-sizing: border-box;}
-        .imgbox{width: 365px;height: 365px;margin: auto;}
+        .imgbox{
+            width: 280px;height: 240px;margin: auto;
+            overflow: hidden;
+        }
+        .imgbox>img:hover{
+            transform: scale(1.05);
+            transition: all 0.25s;
+        }
 
         .list-box{width: 365px;height: 365px;margin: auto;border:5px solid red;}
       
@@ -54,7 +61,7 @@
 
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap cf">
         <div class="box1"><div>text-box</div></div>
         <div class="box2"><div>text-box</div></div>
         <div class="box3"><div>text-box</div></div>
@@ -63,11 +70,13 @@
         <div class="box6"><div>text-box</div></div>
         <div class="box7"><div>text-box</div></div>
     </div>
+
     <div class="wrap2">
         <div class="imgbox">
-            <img src="img/blog/list4.jpg" alt="">
+            <img src="img/tab1/1.jpg" alt="">
         </div>
     </div>
+
     <div class="list-box">
         <div class="list">
             <img src="img/blog/list7.jpg" alt="">
