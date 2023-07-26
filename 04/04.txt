@@ -38,7 +38,13 @@ transform : translate(10px,50px)  / rotate(45deg) / scale(160px) / skew(25deg)
  transiton-property : 변화되는 속성명 
  transition-duration : .5s
  transition-delay :1s 
- transition-timing-function  :ease / ease-in /ease-out/ease-in-out cubic-bezier 
+ transition-timing-function  :ease / ease-in /ease-out/ease-in-out cubic-bezier 4
+
+
+
+
+
+
   
 
 

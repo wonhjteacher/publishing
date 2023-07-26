@@ -51,9 +51,14 @@
             transition: all 0.25s;
         }
 
-        .list-box{width: 365px;height: 365px;margin: auto;border:5px solid red;}
-      
-        .list-box .list .txt-box{width: 365px;height: 365px;background-color: rgba(0,0,0,.65);color:#fff;font-size: 12px;padding:20px;box-sizing: border-box;text-align: center;}
+        .list-box{width: 365px;height: 365px;margin: auto;border:5px solid red;overflow: hidden;position: relative;}
+        .list>img{width: 365px;height: 365px;}
+        .list-box .txt-box{width: 365px;height: 365px;background-color: rgba(0,0,0,.65);color:#fff;font-size: 12px;padding:20px;box-sizing: border-box;text-align: center;position: absolute;left:0;top:300px}
+        .list-box:hover .txt-box{
+            top:0;
+            transition: top 0.25s;
+        }
+        .list-box .txt-box img{width: 50px;}
         .txt-box h3{height: 60px;line-height: 60px;font-size: 14px;}
         .txt-box span:nth-of-type(2){display: block;margin: 20px 0;}
 
@@ -79,10 +84,10 @@
 
     <div class="list-box">
         <div class="list">
-            <img src="img/blog/list7.jpg" alt="">
+            <img src="img/tab1/1.jpg" alt="">
             <div class="txt-box">
                 <h3>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</h3>
-                <span><img src="img/blog/p1.jpg" alt=""></span>
+                <span><img src="img/tab1/2.jpg" alt=""></span>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam hic impedit, odit vel sunt quas ad dolorum ab voluptatem facilis?</span>
             </div>
         </div>
