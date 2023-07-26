@@ -8,11 +8,41 @@
        .wrap{background-color: #e0e0e0;}
        .wrap>div{width: 250px;height: 250px;border:5px solid #968;float: left;margin: 10px;padding-top: 75px;box-sizing: border-box;cursor: pointer;background-color: #fff;}
        .wrap>div>div{width: 100px;height: 100px;text-align: center;line-height: 100px;margin: auto;background-color: violet;}
-     
-
+       .box1:hover>div{
+            transform: scale(1.5);
+            transition-property: transform;
+            transition-duration: 1s ;
+            transition-delay:0.5s; 
+            transition-timing-function:ease-in-out;
+        }
+       .box2:hover>div{
+        transform: translate(50px,100px);
+        transition: transform  2s ;
+    }
+       .box3:hover>div{
+        transform: rotate(45deg);
+        background: blue;
+        transition: all 2s;
+    }
+       .box4:hover>div{
+            transform: skewX(60deg);
+            background: blue;
+            transition-property: background, transform ;
+            transition-duration: 1s , 2s;
+            transition-delay: 0s , 1.1s;
+       }
+       .box5:hover>div{transform: rotate(45deg) scale(1.6)}
+       .box6{position: relative;}
+       .box6>div{position: absolute;left:10px;top:50px}
+       .box6:hover>div{
+            left:110px;
+            top:100px;
+            transition-property: left,top;
+            transition-duration: 0.5s;
+            transition-delay: 0s,0.5s ;
+       }
         .wrap2{height: 500px;background-color: aquamarine;padding-top: 65px;box-sizing: border-box;}
         .imgbox{width: 365px;height: 365px;margin: auto;}
-      
 
         .list-box{width: 365px;height: 365px;margin: auto;border:5px solid red;}
       

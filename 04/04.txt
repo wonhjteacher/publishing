@@ -1,0 +1,72 @@
+
+ -  자식 요소에 플롯 되면 부모요소 의 높이가 없어진다. (0이된다) 
+   1 . 부모요소에 height 값을 설정 
+   2. overflow:hidden 
+  3.clearfix 클래스를 이용하는 방법 
+
+ ::after  대상요소의 마지막 자식으로 화면상에서만 가상 요소 하나가 추가 
+ ::before 대상요소의 첫번째 으로 화면상에서만  가상 요소 하나가 추가 
+대상::after{content:'';}
+
+
+포지션 
+
+ static 기본 흐름 
+ position : fixed  현재흐름에서 빠져서 브라우저 기준으로 위치 고정 
+ position : relative 현재위치 0 0 이 된다. 현재위치를 기준으로 left right top bottom 이 정해진다. 
+ position : absolute 현재흐름에서 빠져서 특정요소(포지션 값이 있는 상위요소)를 기준으로 left right top bottom 이 정해진다
+
+
+
+left : 50px
+right  : 
+top : 
+bottom  : 
+
+z-index: 1 2 3 정수 
+
+===========================================================================
+
+변형 transform 
+
+transform : translate(10px,50px)  / rotate(45deg) / scale(160px) / skew(25deg)  
+
+
+전화(변화의 중간단계 설정) transition
+
+ transition 
+ transiton-property : 변화되는 속성명 
+ transition-duration : .5s
+ transition-delay :1s 
+ transition-timing-function  :ease / ease-in /ease-out/ease-in-out cubic-bezier 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
