@@ -4,7 +4,45 @@
 <meta charset="UTF-8">
 <title>flex ex</title>
 <style>
- 
+ *{box-sizing:border-box; margin:0; padding:0}
+ .header{
+    background-color: rgb(111,125,155);
+    color:#fff;
+    text-align: center;
+    padding: 60px;
+ }
+ .navbar{
+  background-color: rgb(212, 177, 246);
+  display: flex;
+ }
+ .navbar>a{
+    text-decoration: none;
+    color:#fff;
+    padding:16px 24px;
+ }
+ .navbar>a:hover{background-color: rgb(143, 92, 194)}
+ .row{display: flex;flex-wrap: wrap;}
+ .side{
+  flex:100%;
+  background-color: rgb(255, 218, 169);
+  padding:20px;
+ }
+ .main{
+  flex:100%;
+  background-color: rgb(244, 232, 255);
+  padding:20px;
+ }
+ .imgbox{background-color: #ccc;width: 100%;padding: 20px;height: 60px;}
+ .footer{padding: 20px; text-align: center;background: #ddd;}
+@media screen and (min-width:768px) {
+  .side{
+    flex:30%;
+  }
+ .main{
+    flex:70%;
+ }
+  
+}
 </style>
 </head>
 <body>
