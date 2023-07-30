@@ -1,0 +1,17 @@
+@charset "uft-8";
+/* semantic */
+header,footer,section,nav,aside,article,main{display: block;}
+*{margin: 0;padding: 0}
+ul,ol,li{list-style: none}
+a{text-decoration: none;color:inherit}/* inherit상속 */
+h1,h2,h3,h4,h5,h6 {font-size: 12px;font-weight: normal;}/* 제목사이즈 초기화 */
+body{line-height: 1;}
+address{font-style: normal;}
+/* clearfix  */
+.clearfix::after{content: '';display: block;width: 0;height: 0;clear:both}
+.cf::after{content: '';display: block;width: 0;height: 0;clear:both}
+/* table */
+table{border-collapse: collapse;}
+caption{display: none;}
+
+.blind{display: none;}
