@@ -14,6 +14,8 @@ placeholder=""
 name="" 
 id=""
 value="" 입력값 
+required 필수속성
+readonly 읽기전용
 
 <textarea></textarea> 
 <select>
@@ -27,3 +29,26 @@ value="" 입력값
 type="submit" (기본값)
 type="reset"
 type="button"
+
+
+인라인 태그 width height 값이 적용외는 예외 
+iframe
+input 
+img 
+
+동영상 
+<video>
+  <source src="동영상경로" type="video/webm">
+  <source src="동영상경로" type="video/ogg">
+  <source src="동영상경로" type="video/mp4">
+  <track src="ex1.vtt" srclang="ko" kind="subtitle" label="한국어">
+  <track src="ex2.vtt" srclang="fr" kind="subtitle" label="프랑스어">
+  <track src="ex3.vtt" srclang="jp" kind="subtitle" label="영어"
+  video를 지원하지 않는 브라우저 입니다.
+</video>
+
+video 태그에 지정 할 수 있는 속성 
+controls  
+autoplay
+muted
+

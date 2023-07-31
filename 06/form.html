@@ -12,11 +12,11 @@
         <ul>
             <li>
                 <label for="userId">아이디:</label>
-                <input type="text" id="userId" placeholder="아이디는 이메일형식입니다.">
+                <input type="text" id="userId" placeholder="아이디는 이메일형식입니다." required>
             </li>
             <li>
                 <label for="userPw">비밀번호</label>
-                <input type="password" id="userPw" maxlength="7">
+                <input type="password" id="userPw" maxlength="7" required>
             </li>
             <li>
                 <input type="file">
@@ -31,7 +31,7 @@
             <li><input type="time"></li>
             <li><input type="range"></li>
             <li><input type="color"></li>
-            <li><input type="number" min="0" max="10" value="2"></li>
+            <li><input type="number" min="0" max="10" value="2" readonly></li>
         </ul>
     </fieldset>
     <fieldset>
@@ -46,7 +46,22 @@
         <input type="checkbox" id="game" name="hobby" value="게임"><label for="game">게임</label>
         <input type="checkbox" id="book" name="hobby" value="독서"><label for="book">독서</label>
         <input type="checkbox" id="sports" name="hobby" value="스포츠"><label for="sports">스포츠</label>
+        <br>
+        <select name="amount" id="amount">
+            <option value="10">10개씩</option>
+            <option value="20">20개씩</option>
+            <option value="30">30개씩</option>
+            <option value="40">40개씩</option>
+        </select>
+        <br>
+        <textarea name="introduce" id="introduce">간단한 자기소개를 입력해주세요
+        </textarea>
     </fieldset>
+   <!--  <input type="reset" name="btnReset" value="취소하기">
+    <input type="submit" name="btnSubmit" value="입력하기">
+    <input type="button" name="btn" value="버튼"> -->
+    <button type="reset">취소하기</button>
+    <button type="submit">입력하기</button>
 </form>
 </body>
 </html>
