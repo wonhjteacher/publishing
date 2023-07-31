@@ -83,11 +83,45 @@ body{
 }
 
 .type-message{
-    background-color: #fff;
+    background-color: #efefef;
     position: fixed;
     bottom:0;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding:6px
+}
+.type-message>i.fa-lg{
+    line-height: 1;
+}
+.type-message-input{
+    display: flex;
+}
+.message-text-field{
+    border:1px solid #333;
+    border-radius: 4px;
+    background:#fff;
+    width:50vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 4px;
+}
+.message-text-field>input{
+    border:none;
+}
+.message-text-field>input:focus{
+    border:none;
+    outline: none;
+}
+.message-text-field>i{
+    font-size: 12px;
+    color:#ccc;
+}
+.record-message{
+    background-color: #ffe934;
+    padding:4px 6px;
 }
 
 .big-screen-text{
