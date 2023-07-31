@@ -1,0 +1,29 @@
+입력 요소 
+<form method="get또는post" action="서버에 설치된 DB 연결 할 수 있는 프로그램 경로설정">
+ 입력양식
+</form>
+
+<input> 입력 요소를 만드는 태그 
+type="text/password/checkbox/radio/submit/reset/button/file .... "
+
+html 5 추가된 
+type="email / search / url /  number  / tel / date /datetime / week / time / color / range ...."
+
+maxlength =""  입력칸에서 입력 할 수 있는 최대 글자수 지정
+placeholder="" 
+name="" 
+id=""
+value="" 입력값 
+
+<textarea></textarea> 
+<select>
+  <option></option>
+  <option></option>
+  <option></option>
+  <option></option>
+</select>
+
+<button>클릭</button>
+type="submit" (기본값)
+type="reset"
+type="button"
