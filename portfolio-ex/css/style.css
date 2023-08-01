@@ -1,0 +1,52 @@
+/* Global */
+:root{
+  /* color */
+  --color-white:#fff;
+  --color-black:#0e0f0f;
+  --color-blue: #03e8f9;
+  --color-orange: #fd6413;
+  --color-gray: #1b1e26;
+  --color-green: #d5ff40;
+  --color-yellow: #ffc03c;
+  --color-pink: #fe6d79;
+  /* Size */
+  --size-max-width:1200px;
+  /* site colors */
+  --color-primary:var(--color-black);
+  --color-primary-variant:var(--color-gray);
+  --color-accent:var(--color-yellow);
+  --color-accent-variant:var(--color-orange);
+  --color-text:var(--color-white);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+  }
+ul,li,ol{
+    list-style: none;
+  }
+a{
+    text-decoration: none;
+    color:var(--color-text);
+}
+button {
+    background-color: transparent;
+    border: none;
+    outline:none;
+}
+/* Common */
+.title{
+    font-size: 40px;
+    margin: 16px 0;
+}
+
+.description {
+    font-size:24px;
+    margin: 8px 0;
+}
+
+/* home */
+#home{
+    background-color: var(--color-primary);
+    color:var(--color-text);
+}
