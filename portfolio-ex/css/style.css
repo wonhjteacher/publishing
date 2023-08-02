@@ -6,6 +6,7 @@
   --color-blue: #03e8f9;
   --color-orange: #fd6413;
   --color-gray: #232425;
+  --color-gray200: #3c3e3f;
   --color-green: #d5ff40;
   --color-yellow: #ffc03c;
   --color-pink: #fe6d79;
@@ -14,6 +15,7 @@
   /* site colors */
   --color-primary:var(--color-black);
   --color-primary-variant:var(--color-gray);
+  --color-primary-variant200:var(--color-gray200);
   --color-accent:var(--color-pink);
   --color-accent-variant:var(--color-orange);
   --color-text:var(--color-white);
@@ -141,4 +143,34 @@ button {
 }
 .major:hover .major_icon{
   transform: rotate(-15deg) scale(1.2);
+}
+
+/* skills */
+#skills{
+  background-color:  var(--color-primary-variant);
+  color:var(--color-text);
+}
+.skill_title{
+  color:var(--color-accent);
+  margin:1rem 0;
+  font-size: 1.25rem;
+}
+.bar{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin:0.5rem;
+}
+.bar_data{
+  display: flex;
+  justify-content: space-between;
+}
+.bar_bg{
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-primary-variant200);
+}
+.bar_value{
+  height: 4px;
+  background-color: var(--color-accent);
 }
