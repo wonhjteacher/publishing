@@ -5,7 +5,7 @@
   --color-black:#0e0f0f;
   --color-blue: #03e8f9;
   --color-orange: #fd6413;
-  --color-gray: #1b1e26;
+  --color-gray: #232425;
   --color-green: #d5ff40;
   --color-yellow: #ffc03c;
   --color-pink: #fe6d79;
@@ -14,7 +14,7 @@
   /* site colors */
   --color-primary:var(--color-black);
   --color-primary-variant:var(--color-gray);
-  --color-accent:var(--color-yellow);
+  --color-accent:var(--color-pink);
   --color-accent-variant:var(--color-orange);
   --color-text:var(--color-white);
 }
@@ -35,6 +35,14 @@ button {
     outline:none;
 }
 /* Common */
+.section{
+  padding: 4rem;
+  text-align: center;
+}
+.max-container{
+  margin: auto;
+  max-width: var(--size-max-width);
+}
 .title{
     font-size: 2.5rem;
     margin: 1rem 0;
@@ -77,4 +85,60 @@ button {
 #home{
     background-color: var(--color-primary);
     color:var(--color-text);
+    padding: 5rem 1rem;
+    text-align: center;
+}
+.home_avatar{
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 3px solid var(--color-accent);
+}
+.home_title{
+  font-size: 3rem;
+  margin-bottom:1rem;
+}
+.home_title strong{
+  color:var(--color-accent)
+}
+.home_description{
+  font-size: 1.25rem;
+}
+.home_contact{
+  background-color: var(--color-accent);
+  margin: 2rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  display: inline-block;
+  border: 1px solid transparent;
+}
+.home_contact:hover{
+  background-color: transparent;
+  color: var(--color-text);
+  border:1px solid var(--color-accent);
+}
+
+/* About */
+.majors{
+  display: flex;
+  justify-content: space-between;
+  margin: 2.5rem 0;
+}
+.major{
+  background-color: var(--color-primary-variant);
+  padding: 2rem 1rem;
+  color: var(--color-text);
+  border-radius: 16px;
+  box-shadow: 4px 8px 6px rgba(0,0,0,.35);
+  margin: 0 0.5rem;
+  cursor:default;
+}
+.major_icon{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.major:hover .major_icon{
+  transform: rotate(-15deg) scale(1.2);
 }
