@@ -296,4 +296,62 @@ address{
   .section{
     padding: 3rem 2rem;
   }
+  .description {
+    font-size: 1rem;
+  }
+  .header{
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+  }
+  .header_menu {
+    flex-direction: column;
+    padding: 1rem 4rem;
+    text-align: center;
+  }
+  .header_menu>li{
+    margin-bottom: 2rem;
+  }
+  .header_nav{
+    width: 100%;
+    /*display: none; 스크립트처리 */
+  }
+  .header_toggle{
+    display: block;
+    font-size: 2rem;
+    color:var(--color-white);
+    position: absolute;
+    right: 1rem;
+    top:1.2rem;
+  }
+  .home_title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .home_title strong{
+    display: block;
+  }
+  .majors{
+    flex-direction: column;
+    align-items: center;
+  }
+  .major{
+    max-width: 25rem;
+    margin-bottom: 1rem;
+  }
+  .skills_point{flex:100%}
+  .skill_tools_box{flex: 100%;}
+
+  .categories {
+    flex-direction: column;
+  }
+  .category{
+    width: 100%;
+  }
+  .project{
+    flex:0 0 calc(50% - 16px);
+  }
+  .project_data{
+    font-size:0.875rem;
+  }
 }
