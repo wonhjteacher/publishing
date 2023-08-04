@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        for(초기변수;조건식;증감식){
+            실행문
+        }
+        */
+       /*  for(let i=1;i<10;i++){
+             console.log(i)
+       }
+        */
+
+        for(let i=1 ; i<=50 ;i++){
+            if(i%2==0){
+                console.log(i) 
+            }
+        }
+
+        for(let dan=1;dan<10;dan++){
+            //console.log("5*"+dan+"="+5*dan+"\n")
+            console.log(`5X${dan}=${5*dan}`)
+        }
+
+        for (let i = 1 ; i<10 ; i++){
+            if(i===5){
+                break; // break 키워드를 만드면 반복문 종료 
+            }
+            console.log(`2X${i}=${i*2}`)
+        }
+
+        for (let i = 1 ; i<10 ; i++){
+            if(i%2===0){
+                continue;// continue 다음 실행문 생략하고 증감식으로 
+            }
+            console.log(`3X${i}=${i*3}`)
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
