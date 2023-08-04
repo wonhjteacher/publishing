@@ -383,7 +383,9 @@ address{
   }
   .header_nav{
     width: 100%;
-   display: none;  /*스크립트처리 */
+  }
+  .header_nav.on{
+    display: none; 
   }
   .header_toggle{
     display: block;
