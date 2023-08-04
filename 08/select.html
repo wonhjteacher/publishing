@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list.active{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="logo">자바스크립트 선택하기</h1> 
+    <button id="btn">클릭</button>
+    <ul id="list">
+        <li class='list'>1</li>
+        <li class='list'>2</li>
+        <li class='list'>3</li>
+        <li class='list'>4</li>
+        <li class='list'>5</li>
+    </ul>
+    <script>
+        const btn1= document.querySelector('#btn');
+        const logo = document.querySelector('#logo');
+        const list = document.querySelector('#list');
+        const print = () => {
+            console.log('클릭 !!!')
+        }
+
+        btn1.addEventListener('click',print);
+        logo.addEventListener('click',()=>{
+            list.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let userListr =[
+        let userList=[
             {
                 firstName: "민상",
                 lastName: "유",
@@ -27,8 +27,26 @@
                 gender:"male",
             },
         ] 
-
         
+         let pass = userList.filter((item)=>{
+            return item.gender === "male";
+         })
+
+         console.log(pass)
+
+
+        const fruits = ['사과','배','귤','바나나','딸기'];
+
+        fruits.forEach((item,index)=>{
+            console.log(`아이템은 ${item} 인덱스 번호는 ${index}`)
+        })
+
+       /*  for(let i=0 ; i<fruits.length ; i++){
+            console.log(`아이템은 ${fruits[i]} 인덱스 번호는 ${i} `)
+        } */
+
+        fruits
+
     </script>
 </head>
 <body>
