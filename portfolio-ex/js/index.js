@@ -26,3 +26,17 @@ menuBox.addEventListener('click',(e)=>{
     meneUpdate(selectMenu);
 
 })
+/* 필터링처리  */
+// init Isotope
+let $projects = $('.projects').isotope({ // 필터링 될 아이템의 전체 wrapper
+    itemSelector: '.project', // 필터링 될 아이템의 선택자
+    layoutMode: 'fitRows',
+  });
+
+// filter items on button click
+  $('.categories').on( 'click', 'button', function() {
+    $('.categories button').removeClass("selected");
+    $(this).addClass('selected');
+    var filterValue = $(this).attr('data-filter');
+    $projects.isotope({ filter: filterValue });
+  });

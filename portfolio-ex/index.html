@@ -6,7 +6,10 @@
     <title>길동이의 포트폴리오</title>
     <script src="https://kit.fontawesome.com/f58fae1598.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="js/index.js" defer></script>
+    
 </head>
 <body>
 <!-- Header --> 
@@ -29,7 +32,7 @@
 </header>
 <!-- Main --> 
 <main>
-  <!-- Home -->
+  <!-- Home -->1
   <section id="home">
     <div class="home_container max-container"> 
       <img src="images/profile.png" alt="홍길동프로필" class="home_avatar">
@@ -165,13 +168,13 @@
       <h2 class="title">My work</h2>
       <p class="description">Projects</p>
       <ul class="categories">
-        <li><button class="category selected">ALL<span class="category_count">3</span></button></li>
-        <li><button class="category">프로젝트1<span class="category_count">1</span></button></li>
-        <li><button class="category">프로젝트2<span class="category_count">1</span></button></li>
-        <li><button class="category">프로젝트3<span class="category_count">1</span></button></li>
+        <li><button class="category selected" data-filter="*">ALL<span class="category_count">3</span></button></li>
+        <li><button class="category" data-filter=".project1">프로젝트1<span class="category_count">1</span></button></li>
+        <li><button class="category" data-filter=".project2">프로젝트2<span class="category_count">1</span></button></li>
+        <li><button class="category" data-filter=".project3">프로젝트3<span class="category_count">1</span></button></li>
       </ul>
       <ul class="projects">
-        <li class="project">
+        <li class="project project1">
           <a href="#" target="_blank">
             <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
             <div class="project_data">
@@ -180,7 +183,7 @@
             </div>
           </a>
         </li>
-        <li class="project">
+        <li class="project project1">
           <a href="#" target="_blank">
             <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
             <div class="project_data">
@@ -189,7 +192,16 @@
             </div>
           </a>
         </li>
-        <li class="project">
+        <li class="project project2">
+          <a href="#" target="_blank">
+            <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
+            <div class="project_data">
+              <h3>프로젝트명#2</h3>
+              <p>프로젝트 내용 간단한 설명</p>
+            </div>
+          </a>
+        </li>
+        <li class="project project2">
           <a href="#" target="_blank">
             <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
             <div class="project_data">
@@ -198,7 +210,7 @@
             </div>
           </a>
         </li>
-        <li class="project">
+        <li class="project project2">
           <a href="#" target="_blank">
             <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
             <div class="project_data">
@@ -207,16 +219,7 @@
             </div>
           </a>
         </li>
-        <li class="project">
-          <a href="#" target="_blank">
-            <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
-            <div class="project_data">
-              <h3>프로젝트명#1</h3>
-              <p>프로젝트 내용 간단한 설명</p>
-            </div>
-          </a>
-        </li>
-        <li class="project">
+        <li class="project project3">
           <a href="#" target="_blank">
             <img src="images/project-ex.png" alt="프로젝트이름" class="project_img">
             <div class="project_data">
