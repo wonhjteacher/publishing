@@ -358,3 +358,23 @@ body {
     gap:28px;
 }
 
+/* 퀵메뉴  */
+#quickMenu{
+    padding-top:40px;
+}
+.quick-menu-list{
+    display:flex;
+    justify-content: space-around;
+}
+.quick-menu-list>li>a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:4px;
+}
+.quick-menu-list>li>a>span:last-child{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    
+}
