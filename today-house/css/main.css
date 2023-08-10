@@ -165,6 +165,7 @@ body {
 #nav{
     border-top: 1px solid var(--color-gray-01);
     border-bottom: 1px solid var(--color-gray-01);
+    position: relative;
 }
 #nav > .inner { 
     display: flex;
@@ -222,7 +223,6 @@ body {
 }
 
 
-.all-menu-box{display: none;}
 
 /* gnb */
 .all-menu-btn{
@@ -299,6 +299,52 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+}
+/* 전체메뉴  */
+.all-menu-box{
+    background-color:var(--color-white);
+    border-bottom: 2px solid var(--color-primary);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+    position: absolute;
+    left:0;top:53px;
+    z-index: 2000;
+    width: 100%;
+    display: none;
+
+}
+.all-menu-box>.inner{
+    padding: 48px 0 100px 114px;
+}
+.all-menu-list{
+    display: flex;
+    gap:38px
+
+}
+
+.all-menu-list>li>a{
+    display: flex;
+    width: 240px;
+    padding: 12px 2px;
+    align-items: center;
+    border-bottom: 1px solid var(--color-primary);
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+}
+.all-menu-dep2>li>a{
+    display: flex;
+    width: 240px;
+    height: 40px;
+    padding: 10px 8px;
+    align-items: center;
+    color: var(--color-gray-02);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px; 
+}
+.all-menu-dep2>li>a:hover{
+    border-bottom: 1px solid var(--color-gray-02);
 }
 
 /* 컨텐츠 컨테이너 */
