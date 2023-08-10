@@ -31,7 +31,9 @@ body {
     width: 1280px;
     margin: auto;
 }
-
+.blind{
+    display: none;
+}
 
 /* header */
 .header-utill{
@@ -219,7 +221,7 @@ body {
     background: url(../images/fluent_chevron-up-16-filled-gray.png) no-repeat center;
 }
 
-.dep2-box{display: none;}
+
 .all-menu-box{display: none;}
 
 /* gnb */
@@ -242,6 +244,9 @@ body {
     align-items: center;
     gap: 12px;
 }
+.gnb>li{
+    position: relative;
+}
 .gnb>li>a{
     display: flex;
     padding: 6px 16px;
@@ -251,3 +256,59 @@ body {
     font-weight: 600;
     line-height: 20px;
 }
+.gnb>li:hover>.dep2-box{
+    display: flex;
+}
+.dep2-box{
+    position: absolute;
+    left: 0 ;top:42px;
+    display: flex;
+    padding: 20px 0px 20px 24px;
+    gap: 10px;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    z-index: 1000;
+    display: none;
+}
+.dep2-box-menu>ul{
+    display: flex;
+    width: 240px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: 1px solid var(--color-gray-01);
+    padding-right: 24px;
+}
+.dep2-box-menu>ul>li{
+    display: flex;
+    width: 216px;
+    height: 40px;
+    padding: 10px 8px;
+    align-items: center;
+    color:var(--color-gray-02);
+    font-size: 16px;
+    font-weight: 400;
+    line-height:20px;
+}
+.dep2-box-menu>ul>li:hover{
+    border-bottom: 1px solid var(--color-gray-02);
+}
+.dep2-box-banner>ul{
+    display: flex;
+    padding: 0px 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+/* 컨텐츠 컨테이너 */
+.contents-container{
+    padding-top: 20px;
+}
+/* 메인비주얼 */
+#mainVisual{
+    display: flex;
+    justify-content: space-between;
+    gap:28px;
+}
+
