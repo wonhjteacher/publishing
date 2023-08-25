@@ -38,6 +38,7 @@ body {
 .inner{
     width: 1280px;
     margin: auto;
+    max-width: 100%;
 }
 .blind{
     display: none;
@@ -365,6 +366,9 @@ body {
     justify-content: space-between;
     gap:28px;
 }
+#mainVisual img{
+    width: 100%;
+}
 
 /* 퀵메뉴  */
 #quickMenu{
@@ -391,13 +395,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 42px;
+    margin-top: 40px;
     padding: 20px 10px;
 }
 .content-box>.content-box-title>h2{
     font-size: 20px;
-    font-family: 'Pretendard-SemiBold';
-    font-weight: 600;
+    font-family: 'pv-semi'; 
     color:var(--color-black);
     line-height: 28px;
 }
@@ -406,6 +409,9 @@ body {
     font-size: 16px;
     color:var(--color-primary);
     line-height: 20px;
+}
+.imgbox img{
+    width: 100%;
 }
 .interior-tip-card{
     display: flex;
@@ -496,4 +502,69 @@ body {
     font-weight: 600;
     line-height: 20px;
     padding:4px 8px ;
+}
+footer{
+    height: 300px;
+    background-color: var(--color-gray-04);
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:992px) {
+    .header-utill{display: none;}
+    .search-box{display: none;}
+    .writing-btn{display: none;}
+    .header-main-right .search-btn{
+        display: block;
+        width: 36px;
+        height: 34.714px;
+        background: url(../images/mobile_search.svg) no-repeat center;
+        text-indent: -9999px;
+        font-size: 0;
+        border:none;
+        outline: none;
+    }
+    .header-main-left .mobile-all-menu-btn{
+        display: block;
+        width: 52px;
+        height:52px;
+        padding:8px;
+        background: url(../images/all-menu-btn.png) no-repeat center;
+        text-indent: -9999px;
+        font-size: 0;
+        border:none;
+        outline: none;
+    }
+    .header-main-left{
+        gap:12px;
+    }
+    .header-main-right{
+        gap:12px;
+    }
+    #nav{
+        display: none;
+    }
+    #mobileNav{
+        margin-top: 20px;
+        display: block;
+        border-top:1px solid var(--color-gray-02);
+        border-bottom:1px solid var(--color-gray-02);
+        padding:10px;
+    }
+    #mobileNav ul {
+        display: flex;
+        gap: 8px;
+    }
+    #mobileNav ul li{
+        padding:6px 16px;
+        color:var(--color-black);
+        font-weight:600;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .mainVisual-right{
+        display: none;
+    }
 }
