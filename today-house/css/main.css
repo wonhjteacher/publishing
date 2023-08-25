@@ -376,5 +376,26 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
+    font-weight: 400;
     
+}
+.content-box>.content-box-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 42px;
+    padding: 20px 10px;
+}
+.content-box>.content-box-title>h2{
+    font-size: 20px;
+    font-weight: 600;
+    color:var(--color-black);
+    line-height: 28px;
+    font-style: normal;
+}
+.content-box>.content-box-title>.more{
+    font-weight: 600;
+    font-size: 16px;
+    color:var(--color-primary);
+    line-height: 20px;
 }
