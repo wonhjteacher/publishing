@@ -196,7 +196,11 @@
         <section id="mainVisual">
             <h2 class="blind">메인배너이미지</h2>
             <div class="mainVisual-left">
-                <img src="images/main-banner-01.png" alt="그림같은 풍경...">
+                <picture>
+                    <source media="(min-width:992px)" srcset="images/main-banner-01.png">
+                    <source media="(min-width:480px)" srcset="images/banner-840.png">
+                    <img src="images/banner-480.png" alt="그림같은 풍경.." style="width:auto;">
+                </picture>
             </div>
             <div class="mainVisual-right">
                 <img src="images/banner-slider1.png" alt="[광고]키친웨어특가 74%까지 세일">

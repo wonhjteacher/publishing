@@ -547,6 +547,8 @@ footer{
         display: none;
     }
     #mobileNav{
+        width: 100%;
+        overflow-x:auto;
         margin-top: 20px;
         display: block;
         border-top:1px solid var(--color-gray-02);
@@ -563,8 +565,41 @@ footer{
         font-weight:600;
         font-size: 16px;
         line-height: 20px;
+        flex-shrink: 0;
+    }
+    .mainVisual-left img {
+        width: 100%;
     }
     .mainVisual-right{
         display: none;
+    }
+    .quick-menu-list{
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        padding: 0 24px;
+    }
+    .quick-menu-list  li{
+        width:20%;
+        margin-bottom: 24px;
+    }
+    #interiorTip{
+        padding: 0 16px;
+    }
+    .interior-tip-card{
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .interior-tip-card li{
+        width: calc(50% - 8px);
+    }
+    #todayDeal{
+        padding: 0 16px;
+    }
+    .today-deal-card{
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .today-deal-card li{
+        width: calc(50% - 8px)
     }
 }
