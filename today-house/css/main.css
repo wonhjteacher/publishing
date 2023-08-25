@@ -32,6 +32,8 @@ a{text-decoration: none;color:inherit}
 }
 body {
     font-family: 'pv';
+    width: 100%;
+    min-width: 480px;
 }
 
 /* common */
@@ -567,8 +569,15 @@ footer{
         line-height: 20px;
         flex-shrink: 0;
     }
+    #mainVisual{
+        gap:0;
+    }
+    .mainVisual-left{
+        width: 100%;
+    }
     .mainVisual-left img {
         width: 100%;
+        min-width: 100%;
     }
     .mainVisual-right{
         display: none;
@@ -603,3 +612,16 @@ footer{
         width: calc(50% - 8px)
     }
 }
+
+@media screen and (max-width:560px) {
+    .quick-menu-list  li img{
+       max-width:48px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .quick-menu-list  li img{
+        max-width: 40px;
+    }
+}
+
