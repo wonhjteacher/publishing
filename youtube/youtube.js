@@ -4,6 +4,16 @@ const videoListBox = document.querySelector('.video-list');
 const searchInput = document.querySelector('#search');
 const searchBtn =  document.querySelector('#searchBtn') ; 
 
+const getSearchVideo = async() => {
+    let keyword = searchInput.value;
+    let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${keyword}&regionCode=kr&type=video%20&key=${API_KEY}`;
+    let response = await fetch(url) ;
+    let videoData = await response.json() ;
+    videoDataBox=videoData.items;
+    render();
+}
+
+
 const videoList  = async() => {
     let url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&regionCode=kr&key=${API_KEY}`
     let response = await fetch(url) ;
@@ -30,4 +40,9 @@ const render = () => {
 
 }
 videoList();
-
+searchBtn.addEventListener('click',getSearchVideo) ;
+searchInput.addEventListener('keydown',(e)=>{
+    if(e.keyCode === 13){
+        getSearchVideo();
+    }
+})
