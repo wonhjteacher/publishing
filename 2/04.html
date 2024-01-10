@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .wrapper{width: 900px;margin: 0 auto;background-color: #e0e0e0}
+    body{
+      background-image:url(image/bart.png);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: right 60px bottom 100px;
+    }
+    .wrapper{background-color:#fff;width: 900px;margin: 0 auto;/* background-color: #e0e0e0 */}
     .title{text-align: center;}
     .title>img{border:1px solid #666}
     .txt-tb1{text-align: center;background-color: #ff4500;padding: 25px 30px;font-size: 14px;line-height: 24px;color:#fff;}
@@ -13,8 +19,10 @@
     .txt-tb2{background-color: #ddd;border:1px solid #666;color:#333;text-align: center;padding: 20px 30px;}
     .list-tb1,.list-tb2{list-style-type: upper-alpha;padding-left: 0;list-style-position: inside;}
     .list-tb2{list-style-type: square;}
-    
-    
+    .txt-tb3{width: 600px;border:1px solid #666;color:#333;text-align: center;padding: 20px 30px;font-size: 14px;font-style:italic;}
+    .list-tb3>dt{font-size: 14px;font-weight: bold;margin-bottom:4px;margin-top: 8px;}
+    .list-tb3>dd{font-size: 13px;color:#333;margin-left: 0;}
+    .list-tb2>li>span{font-weight: bold;color:#ff4500}
   </style>
 </head>
 <body>
@@ -37,9 +45,9 @@
   </ol>
   <h2 class="sub-title">일정</h2>
   <ul class="list-tb2">
-    <li>접수 및 투표기간 : 9월 4일 ~ 10월 4일</li>
-    <li>심사기간 : 10월 5일 ~ 10월 7일</li>
-    <li>당선발표 : 10월 8일 </li>
+    <li><span>접수 및 투표기간 </span>: 9월 4일 ~ 10월 4일</li>
+    <li><span>심사기간 </span>: 10월 5일 ~ 10월 7일</li>
+    <li><span>당선발표 </span>: 10월 8일 </li>
   </ul>
   <h2 class="sub-title">심사기준</h2>
   <p class="txt-tb3">심사위원 점수 70% + 좋아요 점수 30%</p>
