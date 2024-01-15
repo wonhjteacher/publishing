@@ -5,3 +5,9 @@ ul,ol,li{list-style: none;}
 a{text-decoration: none;color:inherit}
 h1,h2,h3,h4,h5,h6{font-weight: normal;font-size: 100%;}
 body{line-height: 1;}
+button{
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+}
+.blind{display: none;}

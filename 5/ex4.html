@@ -4,8 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/54c2b5cde2.js" crossorigin="anonymous"></script>
+  <style>
+    #searchBar{width: 500px;height: 50px;border:none;border-bottom: 1px solid #000;}
+    #searchBar:focus{outline: none}
+    #loginBtn,#cancleBtn{width: 100px;height: 40px;background: none;}
+  </style>
 </head>
 <body>
-  
-</body>
+  <i class="fa-solid fa-user"></i>
+  <form action="ex.php">
+    <input type="text" id="searchBar" placeholder="검색어를 입력하세요">
+    <input type="submit" name="loginBtn" value="로그인" id="loginBtn">
+    <input type="reset" name="cancleBtn" value="다시쓰기" id="cancleBtn">
+  </form>
+  </body>
 </html>
