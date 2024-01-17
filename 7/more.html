@@ -7,9 +7,9 @@
   <script src="https://kit.fontawesome.com/54c2b5cde2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="profile-body">
+<body>
 <div class="wrapper">
-  <header class="header top-header-transparent">
+  <header class="header">
     <div class='header-top'>
       <div class="header-column">
         <i class="fa fa-fighter-jet"></i>
@@ -39,29 +39,46 @@
     <!-- e:해더하단 -->
   </header>
   <!-- e:header -->
-  <main class="profile">
-      <div class="profile-header">
-        <div class="profile-header-box">
-          <img src="images/empty.jpg" alt="사용자">
-          <h2 class="profile-header-title">My Name</h2>
+  <main class="more">
+    <div class="more-header">
+      <div class="more-header-column">
+        <img src="images/empty.jpg" alt="사용자">
+        <div class="more-header-info">
+          <h2 class="more-header-title">My Name</h2>
+          <p class="more-header-subtitle">user@email.com</p>
         </div>
-      </div>
-      <!-- e:profile-header -->
-      <div class="profile-box">
-        <label for="userEmail" class="blind">사용자이메일</label>
-        <input type="text" value="user@gmail.com" readonly id="userEmail">
-        <div class="profile-actions">
-          <div class="profile-action-btn">
-            <span class="profile-action-circle"><i class="fa fa-comment fa-lg"></i></span>
-            <span class="profile-action-title">My Chatroom</span>
-          </div>
-          <div class="profile-action-btn">
-            <span class="profile-action-circle"><i class="fa fa-pencil fa-lg"></i></span>
-            <span class="profile-action-title">Edit Profile</span>
-          </div>
-        </div><!--e:profile-actions  -->
-      </div>
-      <!-- e:prorile-box -->
+      </div><!-- e:왼쪽 -->
+      <i class="fa fa-comment-o fa-2x"></i><!-- 우측끝 아이콘 -->
+    </div><!-- e:more-header -->
+    <div class="more-options">
+      <ul class="more-option-list">
+        <li>
+          <a href="#">
+            <i class="fa fa-smile-o fa-2x"></i>
+            <span class="more-option-title">Emoticons</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-paint-brush fa-2x"></i>
+            <span class="more-option-title">Themes</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-hand-peace-o fa-2x"></i>
+            <span class="more-option-title">Plus Friend</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-user-circle fa-2x"></i>
+            <span class="more-option-title">Account</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
   </main>
   <nav class="tab-bar">
     <a href="index.html" class="tab-bar-tab tab-bar-selected">

@@ -1,11 +1,11 @@
-body{
+.profile-body{
   padding-top: 0;
 }
 .top-header-transparent{
   background-color:transparent;
 }
 .profile .profile-header{
-  height: 65vh;
+  height: 60vh;
   background: url(../images/bg_default.png) no-repeat  center / cover ;
   width: 100%;
   display: flex;
@@ -33,6 +33,7 @@ body{
 .profile-box #userEmail{
   padding: 4px;
   margin-bottom: 20px;
+  text-align: center;
 }
 .profile-actions{
   display: flex;
@@ -49,7 +50,7 @@ body{
   padding: 16px;
   border-radius: 50%;
   color: #523737;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 .profile-action-title{
   font-size: 12px;
