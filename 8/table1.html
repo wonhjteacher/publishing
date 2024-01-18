@@ -31,6 +31,12 @@
 
     .bbs3{width: 600px;border-collapse: collapse;border:1px solid #000;}
     .bbs3 td{border:1px solid #000;height: 60px;}
+    .tb1{width: 600px;border:1px solid rgb(255, 0, 0);border-collapse: collapse}
+    .tb1 td{border:1px solid red}
+    .tb1 th{border:1px solid red}
+    /* 
+      th => 제목의 방향 scope = "col" / "row" 
+     */
   </style>
 </head>
 <body>
@@ -78,7 +84,15 @@
       <td colspan="3"></td>
      </tr>
      <tr>
+      <td colspan="4"></td>
+     </tr>
+     <tr>
+      <td rowspan="2"></td>
       <td></td>
+      <td></td>
+      <td></td>
+     </tr>
+     <tr>
       <td></td>
       <td></td>
       <td></td>
@@ -89,18 +103,28 @@
       <td></td>
       <td></td>
      </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-     </tr>
-     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-     </tr>
+    </tbody>
+  </table>
+  <table class="tb1">
+    <caption>상품에 따른 월별 판매현황</caption>
+    <thead>
+      <tr>
+        <th rowspan="2" scope="row">구분</th>
+        <th colspan="3" scope="col">상품종류</th>
+      </tr>
+      <tr>
+        <th scope="col">스마트폰</th>
+        <th scope="col">태블릿PC</th>
+        <th scope="col">데스크탑PC</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1월</th>
+        <td>5만대</td>
+        <td>3만대</td>
+        <td>1만대</td>
+      </tr>
     </tbody>
   </table>
 </body>
