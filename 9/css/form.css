@@ -48,7 +48,42 @@ form .info{
   margin-left: 7px;
   display: none;
 }
-input[type=text]:focus + .info ,
-input[type=password]:focus + .info {
+input[type="text"]:focus + .info ,
+input[type="password"]:focus + .info {
   display: block;
 }
+
+form li span:first-child{
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+form li span {display:inline-flex;align-items: center;}
+form li span>*{margin: 0 2px;}
+
+form fieldset:last-of-type{padding: 10px}
+
+form fieldset:last-of-type textarea{
+  width: 400px;
+  height: 100px;
+  padding: 4px;
+  border:none;
+  outline: none;
+  resize:none;
+}
+
+form input[type="submit"], form input[type="reset"]{
+  width: 245px;
+  height: 60px;
+  border:none;
+  color:#fff;
+  font-size: 20px;
+  background-color: #999;
+}
+
+
+form input[type="submit"]{
+  background-color: #1eb702;
+  margin-left: 10px;
+}
+form .btn-box{display: flex;}
