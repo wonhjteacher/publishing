@@ -1,0 +1,5 @@
+@import url(reset.css);
+.bbs1{width: 1200px;margin: 50px auto;}
+.bbs1 th{border-top:2px solid green;border-bottom: 2px solid green;font-size: 14px;height: 40px;}
+.bbs1 td{height: 35px;font-size: 14px;border-bottom: 1px solid #666;text-align: center;}
+.bbs1 td.title{text-align: left;padding-left: 8px;}
