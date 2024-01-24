@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      
+        .wrap>#btn{color:red;width: 100px;height: 100px;background-color: #000;}
+        .titlestyle{color:#fff;background-color: coral;}
+        .wrap>#btn.active{font-size: 30px;color:#fff}
+        .li-style{color:#f00;font-weight: bold;font-size: 20px;}
     </style>
 </head>
 <body>
@@ -20,7 +23,19 @@
         <button id="btn">버튼</button>
     </div>
     <script>
-     
+        //document.querySelector('#logo').style.backgroundColor="#396";
+        //document.querySelector('#logo').style.color="#fff";
+        const title = document.querySelector('#logo');
+        //title.style.backgroundColor = "#396";
+        //title.style.color="#fff";
+        title.classList.add('titlestyle')
+        const btn = document.querySelector('#btn');
+        btn.classList.add('active');
+        const lis = document.querySelectorAll('.list');
+        console.log(lis)
+        lis.forEach((li)=>{
+            li.classList.add('li-style');
+        })
 
     </script>
 </body>
