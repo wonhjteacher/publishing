@@ -7,7 +7,11 @@
     <title>Document</title>
     <style>
         @import url(css/reset.css);
-        
+        #logo{width: 242px;height: 130px;margin: 50px auto;cursor: pointer}
+        #list{display: flex;justify-content: center;}
+        #list.off{display: none;}
+        #list>.list{width: 150px;cursor: pointer;opacity: 0.5;}
+        #list>.list.on{opacity: 1;}
     </style>
 </head>
 <body>
@@ -23,7 +27,17 @@
         </ul>
     </div>
     <script>
-     
+       const list = document.querySelectorAll('.list'); 
+       const logo=document.querySelector('#logo');
+       const ul=document.querySelector('#list');
+       //li클릭시 
+       list.forEach((li)=>{
+        li.addEventListener('click',()=>{li.classList.toggle('on')})
+       })
+       //로고클릭시 
+       logo.addEventListener('click',()=>{
+            ul.classList.toggle('off')
+       })
     </script>
 </body>
 </html>
