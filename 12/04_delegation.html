@@ -21,8 +21,21 @@
         <li class='list'>5</li>
     </ul>
     <script>
-        
-        
+        const listAll= document.querySelector('#listAll');
+        const list = document.querySelectorAll('.list');
+        //이벤트 위임 (delegation)
+        listAll.addEventListener('click',(e)=>{
+            let selectedLi = e.target ;
+            console.log(selectedLi)
+            listUpdate(selectedLi)
+        })
+
+        function listUpdate(li){
+            list.forEach((ele)=>{
+                ele.classList.remove('on')
+            })
+            li.classList.add('on')
+        }
     </script>
 </body>
 </html>
