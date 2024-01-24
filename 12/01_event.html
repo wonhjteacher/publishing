@@ -29,7 +29,19 @@
         </div>
     </div>
     <script>
-     
+        const outerbox = document.querySelector('.outerbox')
+        const middlebox = document.querySelector('.middlebox')
+        const innerbox = document.querySelector('.innerbox')
+        outerbox.addEventListener('click',(e)=>{
+            console.log('outerbox')
+        })
+        middlebox.addEventListener('click',(e)=>{
+            console.log('middlebox')
+        }) 
+        innerbox.addEventListener('click',(e)=>{
+            console.log('innerbox')
+            e.stopPropagation();
+        })
     </script>
    
 </body>
