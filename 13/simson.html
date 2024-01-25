@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="css/simson.css">
+    <style>
+        .gallery img{pointer-events:none;}
+        .type-b img , .type-c .inner{transition: top 0.15s;}
+    </style>
 </head>
 <body>
 <div id="wrapper">
@@ -33,9 +37,43 @@
     </ul>
 </div>
 <script>
-   
+    const typeA = document.querySelectorAll('.type-a');
+    const typeB = document.querySelectorAll('.type-b');
+    const typeC = document.querySelectorAll('.type-c');
+  /*   let a = document.body.childNodes[1]
+    let b = document.body.children[1]
+    console.log(a)
+    console.log(b) */
+ 
+    typeA.forEach((ele)=>{
+        ele.addEventListener('mouseover',(e)=>{
+            e.target.style.borderRadius='20%';
+            e.target.style.borderWidth='3px';
+        })
+        ele.addEventListener('mouseout',(e)=>{
+            e.target.style.borderRadius='50%';
+            e.target.style.borderWidth='5px';
+        })
+    })
 
+     typeB.forEach((ele)=>{
+        ele.addEventListener('mouseover',(e)=>{
+            e.target.children[0].style.top="0px"
+        })
+        ele.addEventListener('mouseout',(e)=>{
+            e.target.children[0].style.top="-30px"
+        })
+    })
 
+    
+    typeC.forEach((ele)=>{
+        ele.addEventListener('mouseenter',(e)=>{
+            e.target.children[0].style.top="-200px"
+        })
+        ele.addEventListener('mouseleave',(e)=>{
+            e.target.children[0].style.top="50px"
+        })
+    })
 </script>
 </body>
 </html>
