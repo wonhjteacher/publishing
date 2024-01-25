@@ -52,10 +52,33 @@
     </ul>
 </div>
 
-<script>
- 
+<script> 
+  const animalsUl =document.querySelector('.animal');
+  const animalLi = document.querySelectorAll('.animal>li');
+  const cover = document.querySelector('.cover');
+  const bigImg = document.querySelector('#bigImg');
 
+  animalsUl.addEventListener('click',(e)=>{
+    let selected = e.target ; //현재클릭된 li가 저장된다. 
+    tab(selected) 
+  })
+ 
+  const tab = (selectedAnimal) => {
+    let bg = window.getComputedStyle(selectedAnimal).backgroundColor ;
+    let srcValue = selectedAnimal.firstChild.getAttribute('src');
+    console.log(bg)
+    cover.style.backgroundColor = bg; 
+    bigImg.setAttribute('src',srcValue) ;
+  } 
+  
 </script>
 </body>
 </html>
+
+<!-- 
+//대상.getAttribute('해당속성명') 해당속성의 현재 값을 반환 
+//대상.setAttribute('해당속성명','새값') 해당속성의 값을 새값으로 다시 지정  
+// 대상의 자식 요소들을 선택 할때  firstChild , lastChild  , childNodes[0] 
+//window.getComputedStyle(대상요소).css속성   :   대상의css속성을 가지고 올때  
+ -->
 

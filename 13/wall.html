@@ -19,7 +19,7 @@
 </head>
 <body>
 <div id="wall">
-  <h1>select paper</h1>
+  <h1 id="title">select paper</h1>
   <img src="img/paper/cover.png" alt="">  
   <ul class="list">
       <li class="on"><img src="img/paper/b01.png" alt="배"></li>
@@ -31,7 +31,10 @@
   </ul>
 </div>
 <script>
- 
+  const wall = document.querySelector('#wall')  ;
+  const paperBox = document.querySelector('.list'); 
+  const paper = document.querySelectorAll('.list>li'); ; 
+  const title = document.querySelector('#title')  ;
 </script>
 
     
