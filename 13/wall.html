@@ -34,7 +34,36 @@
   const wall = document.querySelector('#wall')  ;
   const paperBox = document.querySelector('.list'); 
   const paper = document.querySelectorAll('.list>li'); ; 
-  const title = document.querySelector('#title')  ;
+  const title = document.querySelector('#title');
+// 이벤트는 paper 의 상위요소  paperBox 에 위임한다. 
+//paper 클릭해서 클릭한 요소에 .on 을 적용해서 보더 색상을 바꾼다. 
+// paper 클릭해서 자식으로 있는 img src 값을 가져온다 
+// wal css background 로 적용한다. 
+
+  paperBox.addEventListener('click',(e) => {
+    let selectPaper = e.target ;
+    paperUpdate(selectPaper) ; 
+    bgUpdate(selectPaper)
+  })
+
+  //  paper목록 업테이트 함수 
+   const paperUpdate = (pagerValue) => {
+      paper.forEach((ele)=>{
+        ele.classList.remove('on')
+      })
+      pagerValue.classList.add('on')
+   }
+
+  // 배경이미지가 바뀌는 (업테이트)함수 
+   const bgUpdate = (pagerValue) => {
+    let src = pagerValue.childNodes[0].getAttribute('src');
+    console.log(src)
+    wall.style.backgroundImage =`url(${src})` ; 
+   } 
+
+  
+
+
 </script>
 
     
