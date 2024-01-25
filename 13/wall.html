@@ -41,9 +41,13 @@
 // wal css background 로 적용한다. 
 
   paperBox.addEventListener('click',(e) => {
-    let selectPaper = e.target ;
-    paperUpdate(selectPaper) ; 
-    bgUpdate(selectPaper)
+    if(e.target.tagName == 'LI') {
+      let selectPaper = e.target ;
+      paperUpdate(selectPaper) ; 
+      bgUpdate(selectPaper)
+    }else{
+      return;
+    }
   })
 
   //  paper목록 업테이트 함수 
@@ -51,17 +55,22 @@
       paper.forEach((ele)=>{
         ele.classList.remove('on')
       })
+    
       pagerValue.classList.add('on')
+     
    }
 
   // 배경이미지가 바뀌는 타이틀 (업테이트)함수 
    const bgUpdate = (pagerValue) => {
-    let src = pagerValue.childNodes[0].getAttribute('src');
-    let txt = pagerValue.childNodes[0].getAttribute('alt');
-    console.log(src)
-    console.log(txt)
-    wall.style.backgroundImage =`url(${src})` ; 
-    title.innerText = txt ;
+  
+        let src = pagerValue.childNodes[0].getAttribute('src');
+        let txt = pagerValue.childNodes[0].getAttribute('alt');
+        console.log(src)
+        console.log(txt)
+        wall.style.backgroundImage =`url(${src})` ; 
+        title.innerText = txt ;
+    
+   
    } 
 
 
