@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-   
+    <link rel="stylesheet" href="css/kakao.css">
+    <style>
+        /* pointer-events:none   마우스이벤트 처리방법 특정요소가 이벤가 적용되게 할지 아닐지 */
+        .title_list>li * {pointer-events: none;}
+    
+    </style>
 </head>
 <body>
 <div>
     <div class="tab">
-        <div class="tab_title">
+        <div class="tab_title">     
             <h3><a href="#">카카오TV</a></h3>
             <ul class="title_list">
                 <li data-num='0' class="on"><a href="#">TV하일라이트</a></li>
@@ -130,8 +135,34 @@
     </div>
 </div>
 <script>
+    const titleList= document.querySelector('.title_list');
+    const title = document.querySelectorAll('.title_list>li');
+    const content =  document.querySelectorAll('.tab_content');
+    //이벤트 위임해서 사용할 함수 
+    titleList.addEventListener('click',(e)=>{
+        let selectTitle = e.target ;  
+        let dataNumer = selectTitle.dataset.num; 
+        console.log(selectTitle);
+        console.log(dataNumer);
+        titleUpdate(selectTitle)
+        contentsUpdate(dataNumer)
+    })
 
-  
+    //클릭시 제목이 update 함수 
+    const titleUpdate = (titleLi)=>{ 
+       title.forEach(ele => {
+        ele.classList.remove('on');
+       });
+        
+        titleLi.classList.add('on')
+    }
+    // 내용이 update 함수 
+    const contentsUpdate = (selectedUlNum)=>{ 
+        content.forEach(element => {
+            element.classList.remove('on')
+        });
+        content[selectedUlNum].classList.add('on')
+    }
 </script>
 </body>
 </html>
