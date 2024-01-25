@@ -38,9 +38,9 @@
         middlebox.addEventListener('click',(e)=>{
             console.log('middlebox')
         }) 
-        innerbox.addEventListener('click',(e)=>{
+        innerbox.addEventListener('click',(event)=>{
             console.log('innerbox')
-            e.stopPropagation();
+            event.stopPropagation();
         })
     </script>
    

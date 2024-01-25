@@ -8,11 +8,13 @@
   </style>
 </head>
 <body>
-  <div class="face"></div>   
+  <div class="face" style="border:5px solid red"></div>   
   <script>
-    
-        
-         
+    const face = document.querySelector('.face');
+    console.log(face.style.borderColor)
+    face.style.borderColor = 'green'
+    let leftValue = window.getComputedStyle(face).left;  
+    console.log(leftValue)
   </script>
 </body> 
 </html>
