@@ -14,11 +14,19 @@
         }
         .cover{
             background: #f5db87;
-            width: 400px;height: 600px
+            width: 400px;height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .animal{width: 400px;height: 600px}
-        .animal li{width: 200px;height: 200px;cursor: pointer;}
-        .animal li img{width: 100px;height: 100px;pointer-events: none;}
+        .animal{width: 400px;height: 600px;display: flex;flex-wrap: wrap;}
+        .animal li{
+            width: 200px;height: 200px;cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .animal li img{width: 100px;height: 100px;pointer-events: none; transition: all 0.15s;}
         .animal li:hover img{width: 150px;height: 150px;}
         .a01{background-color: #fed75f}
         .a02{background-color: #fffbd9}
