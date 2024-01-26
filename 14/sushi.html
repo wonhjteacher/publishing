@@ -21,16 +21,19 @@
         opacity: 0;
         transition: opacity 1s;
       }
+      #list li:first-child{
+        opacity: 1;
+      }
       #textbox{
         width:400px;height: 60px;
-        padding: 10px;box-sizing: border-box;
+        padding: 10px 30px;box-sizing: border-box;
         margin: 0 auto;color:#e33fac;
         box-shadow: 0 6px 4px #e33fac;
         background: #000;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
       }
       #textbox>a{
         display: block;
@@ -93,6 +96,8 @@
       let sushiNameText = sushiList[currentNum].children[0].getAttribute('alt');
       sushiName.innerText = sushiNameText ;
     } 
+    
+   
 
   </script>
 
