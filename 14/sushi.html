@@ -40,8 +40,9 @@
         font-size: 0;
       }
       #textbox>a#next{background-position: right 0 top 0 ;}
-      
-      #sushiName{}
+      #prev{order:1}
+      #next{order:3}
+      #sushiName{order:2}
     </style>
 </head>
 <body>
@@ -62,7 +63,36 @@
       <h3 id="sushiName">장어초밥</h3>
   </div>
   <script>
+    const prev = document.querySelector('#prev');
+    const next = document.querySelector('#next');
+    const sushiName = document.querySelector('#sushiName');
+    const sushiList = document.querySelectorAll('#list>li');
+    const sushiLength = sushiList.length;
+    let currentNum=0;
+    prev.addEventListener('click',()=>{
+      currentNum--;
+      if(currentNum<0){
+        currentNum=sushiLength-1;
+      }
+      sushiShow()
+    })
 
+    next.addEventListener('click',()=>{
+      currentNum++;
+      if(currentNum>sushiLength-1){
+        currentNum=0;
+      }
+      sushiShow()
+    })
+
+    const sushiShow = () => {
+      sushiList.forEach((ele)=>{
+        ele.style.opacity = 0 
+      })
+      sushiList[currentNum].style.opacity = 1 ;
+      let sushiNameText = sushiList[currentNum].children[0].getAttribute('alt');
+      sushiName.innerText = sushiNameText ;
+    } 
 
   </script>
 
