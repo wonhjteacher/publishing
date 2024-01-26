@@ -16,16 +16,17 @@
         overflow: hidden;
         }
        .title{width: 200px;height: 40px;background-color: #000;color:#fff;margin: 0 auto;line-height: 40px;}
+       #imgSlider{position: relative;transition: left 0.5s;}
     </style>
 </head>
 <body>
     <h1>APPLE PRODUCT</h1>
     <h2>APPLE SELECT</h2>
     <ul class="list">
-        <li>iPhone</li>
-        <li>iPod</li>
-        <li>iPAD</li>
-        <li>iMac</li>
+        <li data-index="0">iPhone</li>
+        <li data-index="1">iPod</li>
+        <li data-index="2">iPAD</li>
+        <li data-index="3">iMac</li>
     </ul>
     <div class="imglist">
         <img src="img/slide/item.png" alt="" id='imgSlider'>
@@ -36,6 +37,17 @@
        const list = document.querySelectorAll('.list>li') //클릭할 목록
        const title = document.querySelector('.title');//문자가 출력될 문단 p
        const imgSlider = document.querySelector('#imgSlider')//슬라이더 이미지 
+
+       listBox.addEventListener('click',e =>{
+            let seletedItem = e.target;
+            let text = seletedItem.innerText;
+            let index = seletedItem.dataset.index;
+            let targetPos = index * -250 ;
+            console.log(targetPos);
+            title.innerText = text ;
+            imgSlider.style.left = `${targetPos}px`
+       })
+
     </script>
 </body>
 </html>
