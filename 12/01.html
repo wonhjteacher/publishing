@@ -10,6 +10,12 @@
         .titlestyle{color:#fff;background-color: coral;}
         .wrap>#btn.active{font-size: 30px;color:#fff}
         .li-style{color:#f00;font-weight: bold;font-size: 20px;}
+
+        .itemStyle{
+            background: blue;
+            color:#fff;
+            font-size: 50px;
+        }
     </style>
 </head>
 <body>
@@ -21,6 +27,10 @@
             <li class="list">리스트3</li>
         </ul>
         <button id="btn">버튼</button>
+        <ul class="list-box">
+            <li class="item">2023</li>
+            <li class="item">2024</li>
+        </ul>
     </div>
     <script>
         //document.querySelector('#logo').style.backgroundColor="#396";
@@ -35,6 +45,14 @@
         console.log(lis)
         lis.forEach((li)=>{
             li.classList.add('li-style');
+        })
+
+
+        const listItem = document.querySelectorAll('.item')
+        listItem.forEach((ele)=>{
+           ele.addEventListener('click',()=>{
+            ele.classList.toggle('itemStyle')
+           })
         })
 
     </script>
