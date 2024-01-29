@@ -49,17 +49,38 @@
     <div class="items">
         <div class="item"></div>
         <div class="item"></div>
-        <div class="item">750</div>
+        <div class="item" id="box750">750</div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
-        <div class="item"></div>
+        <div class="item" id="bottom"></div>
     </div>
     <script>
+       const btns = document.querySelector('.btns');
+       const box750 = document.querySelector('#box750')
+       const bottom = document.querySelector('#bottom')
+       console.log(bottom.getBoundingClientRect().top)
        
+       btns.addEventListener('click',(e)=>{
+         if(e.target.dataset.direction == "750"){
+            window.scrollTo(0,box750.getBoundingClientRect().top)
+         }else if(e.target.dataset.direction == "bottom50"){
+            window.scrollBy(0,50)
+         }else if(e.target.dataset.direction == "top50"){
+            window.scrollBy(0,-50)
+         }else if(e.target.dataset.direction == "top"){
+            window.scrollTo(0,0)
+         }else if(e.target.dataset.direction == "bottom") {
+            window.scrollTo(0,bottom.getBoundingClientRect().top+250)
+         }
+       })
     </script>
 </body>
+<!-- 
+ scrollBy  상대적 위치 
+ scrollTo 절대적 위치 
 
+ -->
 </html>

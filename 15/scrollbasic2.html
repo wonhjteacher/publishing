@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-
+    <style>
+        *{
+            scroll-behavior: smooth;
+            /* 
+            스크립트 이용시 
+            scrollTo , scrollBy 사용할때 behavior 옵션대신 css 설정
+            */
+        }
+    </style>
 
 </head>
 <body>
@@ -19,13 +27,40 @@
 	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.In enim justo, rhoncus ut 
     </div>
     <script>
+        const div=document.querySelector('div');
+        const btn1=document.querySelector('#btn1');
+        const btn2=document.querySelector('#btn2');
 
+        btn1.addEventListener('click',()=>{
+            div.scrollTo(0,500)
+        })
+        btn2.addEventListener('click',()=>{
+            div.scrollTo(0,700)
+        })
 
+        /* btn2.addEventListener('click',()=>{
+            div.scrollTo({
+                left:0,
+                top:700,
+                behavior:"smooth"
+            })
+        }) */
    </script>
   
 </body>
 </html>
 
+<!-- 
+
+    scrollTo(x좌표, Y좌표)  특정위치로 스크롤 시켜주는 함수 
+    scrollTo({
+        top: 500,
+        left:0,
+        behavior :'smooth'  
+    })
+ 
+    behavior : 'auto' / 'instant' / 'smooth'
+    -->
 
 
 
