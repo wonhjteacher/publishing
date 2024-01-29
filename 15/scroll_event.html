@@ -62,7 +62,20 @@
   </p>
 </div>
 <script>
+   const body = document.querySelector('body') ;
+	 const pageHeader  = document.querySelector('.pageHeader');
 
+	 document.addEventListener('scroll',()=>{
+		let nowScroll = document.documentElement.scrollTop;
+		nowScroll  = parseInt(nowScroll) ;
+		console.log(nowScroll)
+		if(nowScroll > 250){
+			pageHeader.classList.add('fix')
+		}else{
+			pageHeader.classList.remove('fix')
+		}
+
+	 })
 </script>
 </body>
 </html>
