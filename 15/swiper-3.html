@@ -21,6 +21,32 @@
       top:0;width: 100%;
       z-index: 20000;
      }
+     .swiper-pagination .swiper-pagination-bullet{
+      border-radius: 5px;
+      width: auto;
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+      font-size: 14px;
+      padding: 2px 10px;
+      background-color: #000;
+      opacity: 1;
+      color:#fff;
+     }
+     .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+      background-color: #f00;
+     }
+
+     .btn-prev,.btn-next{
+      width: 42px;height: 38px;
+      background:url(img/can/btn_sprite.png) no-repeat left 0 top -38px;
+      position: absolute;left:10px;top:50%;transform: translateY(-50%);
+      z-index:1000;
+     }
+     .btn-next{
+      left: auto;right: 10px;
+      background-position: right 0 top -70px;
+     }
 
   </style>
 </head>
@@ -38,20 +64,25 @@
       </div><!-- //swiper-wrapper -->
       <div class="swiper-pagination"></div>
     </div><!--  //swiper-->
-    <div class="swiper-btn-prev"></div>
-    <div class="swiper-btn-next"></div>
+    <div class="btn-prev"></div>
+    <div class="btn-next"></div>
   </div><!-- //banner -->
   <script>
+      const canText = '스타벅스';
       const canSlider= new Swiper('.banner .swiper', {
-     
+       slidesPerView:3,
+       spaceBetween:0,
       loop:true,
       navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              nextEl: '.btn-next',
+              prevEl: '.btn-prev',
       },
       pagination: {
               el: '.swiper-pagination',
               clickable:true,
+              renderBullet: function (index, className) {
+              return '<span class="' + className + '">' + canText + (index + 1) + "</span>";
+        },
       },
     });
   </script>
