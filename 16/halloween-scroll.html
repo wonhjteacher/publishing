@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <style>
-      
-    </style>
+    <link rel="stylesheet" href="css/halloween.css">
 </head>
 <body>
 <div id="wrapper">
@@ -57,8 +55,25 @@
    
 </div>  
 <script>
-   
+   const gnb = document.querySelector('.gnb');
+   const gnbLi= document.querySelectorAll('.gnb li');
+   const section = document.querySelectorAll('.section');
+   const gnbPos = gnb.getBoundingClientRect().top;
+  //윈도우 스크롤 시 gnb 상단 고정 
+   const gnbFix = () => {
+    const nowScroll = document.documentElement.scrollTop ; 
+    if(nowScroll > gnbPos){
+        gnb.classList.add('fix')
+    }else{
+        gnb.classList.remove('fix')
+    }
+   }
+   window.addEventListener('scroll',gnbFix)
 </script>  
 </body>
 </html>
-
+<!-- 
+window.pageYOffset;
+window.scrollY;
+document.documentElement.scrollTop;
+ -->
