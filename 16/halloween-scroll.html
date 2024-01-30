@@ -69,6 +69,13 @@
     }
    }
    window.addEventListener('scroll',gnbFix)
+
+   gnb.addEventListener('click',(e)=>{
+    const selected = e.target ;
+    const index = selected.dataset.index;
+    const sectionPos = section[index].getBoundingClientRect().top;
+    window.scrollBy(0,sectionPos);
+   })
 </script>  
 </body>
 </html>

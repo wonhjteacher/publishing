@@ -4,7 +4,31 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-     
+      @import url(css/reset.css);
+      html,body{height: 100%;scroll-behavior: smooth;}
+      .section{height: 100%;position: relative;}
+      .section h1{position: absolute;left:50%;top:50%;transform: translate(-50%,-50%);font-size: 150px;color:#fff;} 
+      #section1{background: #81c496}
+      #section2{background: #cc6945}
+      #section3{background: #d41257}
+      #section4{background: #053578}
+
+      #navi{
+        position: absolute;right: 0;width: 160px;background-color: #fff;
+        z-index: 1000;transition: top 0.35s;
+      }
+      #navi li a{
+        pointer-events: none;
+        display: block;
+        height: 40px;line-height: 40px;text-align: center;
+        padding: 8px 0;border-bottom: 1px solid #ccc;
+      }
+      #navi li:last-child a{border-bottom: none}
+
+      #navi li:nth-child(1).on a{background: #81c496;color:#fff}
+      #navi li:nth-child(2).on a{background: #cc6945;color:#fff}
+      #navi li:nth-child(3).on a{background: #d41257;color:#fff}
+      #navi li:nth-child(4).on a{background: #053578;color:#fff}
     </style>
     
 </head>
@@ -20,9 +44,27 @@
     <div class="section" id="section3"><h1>section3</h1></div>
     <div class="section" id="section4"><h1>section4</h1></div>
     <script>
+       const navi = document.querySelector('#navi');
+       const naviList = document.querySelectorAll('#navi li');
+       const section = document.querySelectorAll('.section');
+       const naviMid = window.innerHeight/2 - navi.offsetHeight/2
+     
+       window.addEventListener('scroll',()=>{
+        const nowScroll = window.scrollY;
+        const targetPos = nowScroll + naviMid
+        navi.style.top =`${targetPos}px`;
+       })
        
-    
-
+        //클릭시 해당 섹션으로 스크롤
+        navi.addEventListener('click',(e)=>{
+            naviList.forEach((ele)=>{
+                ele.classList.remove('on')
+            })
+            e.target.classList.add('on') 
+            const index=e.target.dataset.index;
+            const targetPos = section[index].getBoundingClientRect().top;
+            window.scrollBy(0,targetPos)
+        })
     </script>
 </body>
 </html>
