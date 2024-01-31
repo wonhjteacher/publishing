@@ -4,20 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/common.css">
-  <style>
-    h1{
-      font-size: var(--title--xl--text-6xl--semibold,24px);
-      color:var(--primary--primary-800,#158);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <div class="box">
-      <h1>변수</h1>
-      <div class="inner">
-          <h2>변수</h2>
+<div class="wrapper">
+  <header id="header">
+   <div class="top-notice">
+    <div class="notice-contents">
+      <p>아디다스 구매 이용약관 계정공지</p>
+      <button class="btn-close-notice">닫기</button>
+    </div>
+   </div>
+   <div class="header-top-menu">
+      <ul class="utility">
+        <li><a href="#">도움말</a></li>
+        <li><a href="#">주문및반품</a></li>
+        <li><a href="#">아디다스클럽가입하기</a></li>
+      </ul>
+   </div>
+   <div class="header-contents">
+    <h1 class="logo">아디다스</h1>
+    <nav>
+      <ul class="gnb">
+        <li><a href="#">MEN</a></li>
+        <li><a href="#">WOMEM</a></li>
+        <li><a href="#">KIDS</a></li>
+        <li><a href="#">SPORTS</a></li>
+        <li><a href="#">BRANDS</a></li>
+        <li><a href="#">ONLINE OUTLET</a></li>
+      </ul>
+    </nav>
+    <div class="header-utility-box">
+      <div class="search-box">
+        <label for="searchInput" class="blind">검색창</label>
+        <input type="search" placeholder="Search" id="searchInput">
+        <button class="btn-search">검색</button>
+        <ul class="btn-header-utility-action">
+          <li><a href="#">로그인<span class="badge-num">1</span></a></li>
+          <li><a href="#">나의관심목록</a></li>
+          <li><a href="#">장바구니</a></li>
+        </ul>
       </div>
-  </div>
+    </div>
+   </div>
+  </header>
+</div>
 </body>
 </html>
