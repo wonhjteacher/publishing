@@ -46,7 +46,7 @@
     <img src="img/scroll/toy06.png" class="a03">
   </div>
    <div class="section three" data-index='2'>
-	<img src="img/scroll/toy03.png">
+	  <img src="img/scroll/toy03.png">
   </div>
    <div class="section four" data-index='3'>
 	<img src="img/scroll/toy04.png">
@@ -55,7 +55,23 @@
 	<img src="img/scroll/toy05.png">
   </div>
   <script>
+      const section = document.querySelectorAll('.section');
+      const observerFnc = (entries) =>{
+        console.log(entries);
+        entries.forEach(ele=>{
+          if(ele.isIntersecting){
+            ele.target.classList.add('active')
+          }else{
+            ele.target.classList.remove('active')
+          }
+        })
+      }
+      const option = {
+          threshold:.85
+        }
+      const observerObject  = new IntersectionObserver(observerFnc,option);
       
+      section.forEach(ele => observerObject.observe(ele))
   </script>
 </body>
 </html>
