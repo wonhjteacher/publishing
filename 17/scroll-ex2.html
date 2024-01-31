@@ -41,8 +41,25 @@
     <div class="section s6" data-index='5'></div>
 
     <script>
-       
+       const section = document.querySelectorAll('.section');
+       const li = document.querySelectorAll('.gnb li');
 
+       const callbackFnc = (entries) => {
+        entries.forEach((ele)=>{
+            const index = ele.target.dataset.index;
+            li.forEach(ele=>ele.classList.remove('on'));
+            if(window.scrollY === 0){
+                li[0].classList.add('on');
+            }else{
+                li[index].classList.add('on');
+            }
+        })
+
+       }
+       const option = {threshold: 0.6}
+       const scrollObserver = new IntersectionObserver(callbackFnc,option);
+
+       section.forEach(ele=>scrollObserver.observe(ele));
        
         
     </script>

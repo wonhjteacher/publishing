@@ -56,9 +56,13 @@
   </div>
   <script>
       const section = document.querySelectorAll('.section');
+      const li = document.querySelectorAll('.gnb li')
       const observerFnc = (entries) =>{
         console.log(entries);
         entries.forEach(ele=>{
+          const index = ele.target.dataset.index;
+          li.forEach(ele=>ele.classList.remove('on'))
+          li[index].classList.add('on')
           if(ele.isIntersecting){
             ele.target.classList.add('active')
           }else{
