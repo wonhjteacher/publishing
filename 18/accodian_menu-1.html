@@ -16,29 +16,42 @@
         background: url(img/sprite.png) no-repeat right top ;
      }
      .main>li.on>a{background-position: right top -60px;color: #048ffb;}
-    
+     .sub>li{
+        height: 50px;line-height: 50px;
+        font-size: 18px;
+        padding-left: 40px;
+        color:#999;
+     }
+   
+     .main>li>a{pointer-events: none;}
+     /* max-height 최대높이 max-width 최대넓이 */
+     .sub{max-height: 0;transition: max-height 0.65s;overflow: hidden;}
+     .sub.active{max-height:500px}
     </style>
 </head>
 <body>
     <div id="wrapper">
         <ul class="main">
-            <li>
+            <li data-num="0">
                 <a href="#">Main1</a>
                 <ul class="sub">
                     <li><a href="#">Sub1</a></li>    
                     <li><a href="#">Sub2</a></li>    
                     <li><a href="#">Sub3</a></li>    
+                    <li><a href="#">Sub3</a></li>    
                 </ul>
             </li>
-            <li>
+            <li data-num="1">
                 <a href="#">Main2</a>
                 <ul class="sub">
                     <li><a href="#">Sub1</a></li>    
                     <li><a href="#">Sub2</a></li>    
                     <li><a href="#">Sub3</a></li>    
+                    <li><a href="#">Sub3</a></li>    
+                    <li><a href="#">Sub3</a></li>    
                 </ul>
             </li>
-            <li>
+            <li data-num="2">
                 <a href="#">Main3</a>
                 <ul class="sub">
                     <li><a href="#">Sub1</a></li>    
@@ -46,7 +59,7 @@
                     <li><a href="#">Sub3</a></li>    
                 </ul>
             </li>
-            <li>
+            <li data-num="3">
                 <a href="#">Main4</a>
                 <ul class="sub">
                     <li><a href="#">Sub1</a></li>    
@@ -56,5 +69,6 @@
             </li>
         </ul>
     </div>
+    <script src="js/menu1.js"></script>
 </body>
 </html>
