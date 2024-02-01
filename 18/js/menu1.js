@@ -1,6 +1,8 @@
 const gnb = document.querySelector('.main');
 const dep1 = document.querySelectorAll('.main>li');
 const dep2List  = document.querySelectorAll('.sub');
+dep1.forEach((ele,index)=>ele.setAttribute('data-num',index))
+
 gnb.addEventListener('click',(e)=>{
   let selectedDep1 = e.target ;
   let isState = selectedDep1.classList.contains('on') ;
