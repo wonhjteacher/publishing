@@ -80,7 +80,33 @@ document.addEventListener('DOMContentLoaded',()=>{
       document.frm1.m10.value="";
     }
   });
-
+  //11 charAt(인덱스번호) 
+  document.frm1.btn11.addEventListener('click',()=>{
+    let gender=document.frm1.m11.value.charAt(0);
+    if(gender==1 || gender==3){ 
+         alert('남자')
+     }else if(gender==2 || gender==4){
+          alert('여자')
+    }else{
+          alert('잘못된 입력')
+    }
+  })
+  //12
+  document.frm1.btn12.addEventListener('click',()=>{
+    let a=document.frm1.n12.value;
+    let b=document.frm1.m12.value;
+    if(a!=b){
+        alert('비밀번호가 일치하지 않습니다 다시 입력하세요');
+        document.frm1.n12.value ="";
+        document.frm1.n12.focus();
+        document.frm1.n13.value ="";
+    }
+})
+ //13
+ document.frm1.btn13.addEventListener('click',()=>{
+  let a=document.frm1.n13.value.length;
+   if(a<=1)  alert('한글자 이상 입력 하세요')
+  })
 
 
 })//DOMContentLoaded
