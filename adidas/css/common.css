@@ -1,3 +1,4 @@
+
 :root{
   /* Color styles */
 --warning--warning-900: rgba(122, 39, 26, 1);
@@ -68,3 +69,8 @@
 --body--normal--text-6xl--regular: 14px;
 
 }
+
+body{
+  font-family: 'Inter',sans-serif
+}
+

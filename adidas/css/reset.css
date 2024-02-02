@@ -18,6 +18,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 	background: transparent;
 }
+body *{
+	box-sizing: border-box;
+}
 body {
 	line-height: 1;
 }
@@ -56,3 +59,20 @@ table {
 	display: none;
 }
 
+a{text-decoration: none;color:inherit}
+
+button{
+	background-color: inherit;
+	border:none;
+	box-shadow: none;
+	border-radius:0;
+	padding: 0;
+	cursor: pointer;
+}
+
+input::-webkit-search-results-decoration, 
+input::-webkit-search-results-button,
+input::-webkit-search-cancel-button,
+input::-webkit-search-decoration{
+	display:none;
+}
