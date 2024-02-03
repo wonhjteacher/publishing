@@ -48,7 +48,7 @@
     const product = {
       title: 'item' , 
       print : ()=>{
-        console.log(this.title+"new");
+        console.log(this.title+"new"); //화살표 함수는 이 상황에서 this는 윈도우를 가리킴으로 안됨 function(){} 으로 만들기 
       }
     }
 
