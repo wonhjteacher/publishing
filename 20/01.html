@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  /*   console.log(1) 
+    setTimeout(()=>{console.log(2)},3000)
+    console.log(3) */
+  
+    const fnc3 = function(){
+      console.log(3);
+    }
+    const fnc2 = function(fnc3){
+      setTimeout(()=>{
+        console.log(2);
+        fnc3();
+      },3000)
+    }
+    const fnc1 = function(fnc2){
+      console.log(1);
+      fnc2(fnc3)
+      
+    }
+
+    let finalResult = fnc1(fnc2)
+
+  </script>
+</body>
+</html>
+
+<!-- 
+   setTimeout(함수,시간)
+
+  비동기처리 
+
+ ()=>{
+   ()=>{
+    ()=>{
+       ()={
+
+      }
+    }
+   }
+ }
+
+-->
