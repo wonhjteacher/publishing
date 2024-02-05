@@ -17,7 +17,7 @@ citybtn.forEach((ele)=>{ele.addEventListener('click',(e)=>{getCitytWeather(e)})}
      getCurrentWeater(lat,lon)
   })
  }
- //requestGeolocationPermission()
+ // 브라우저의 위치 정보가 허용되어 있어야 navigator.geolocation.getCurrentPosition 사용 가능 , requestGeolocationPermission()
 
 const getCurrentWeater = async(lat , lon) =>{ 
   let url = new URL(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`);

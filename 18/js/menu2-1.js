@@ -5,19 +5,20 @@ const contentList = document.querySelector('.content_list');//ul
 const content = document.querySelectorAll('.content');//li
 const contentBody = document.querySelectorAll('.acco-body') //ul>li>p
 content.forEach((ele,index)=>ele.setAttribute('data-index',index));//li에 data-index속성부여 
-// 테마바꾸기 
-star.forEach(ele=>{
-  ele.addEventListener('click',()=>{
-    let isNight  =  body.classList.contains('night');
-    if(isNight){// 현재 밤 => 낮으로 
-      body.classList.remove('night');
-      moon.classList.remove('on')
-    }else{ // 현재 낮 => 밤으로)
-      body.classList.add('night');
-      moon.classList.add('on')
-    }
-  })
-})
+//  시간에 따라 테마바꾸기 
+const upDateThema = () =>{
+  const now = new Date();
+  let h = now.getHours();// 시간
+  console.log(h)
+  if(h>18){ //pm 6 시 이후 밤 
+    body.classList.add('night');
+    moon.classList.add('on')
+  }else{
+    body.classList.remove('night');
+    moon.classList.remove('on')
+  }
+}
+upDateThema(); // 호출 
 
 // 아코디언 메뉴 
 contentList.addEventListener('click',e=>{
