@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .box{border: 5px solid #000;min-width: 700px}
+      .one{width: 600px;height: 100px;border:1px solid red;margin: 10px;} 
+  </style>
+</head>
+<body>
+  <div class='box'>
+      
+  </div>
+  <script>
+    const box=document.querySelector('.box');
+    const data = ['data_ex/jsonData-1.json','data_ex/jsonData-1.json','data_ex/jsonData-2.json','data_ex/jsonData-3.json']
+    const mkElement = (num) =>{
+      let mkDiv = document.createElement('div');
+      mkDiv.setAttribute('class','one');
+      mkDiv.innerText=num;
+      box.append(mkDiv); 
+    }
+
+    mkElement(1)
+    mkElement(2)
+    mkElement(3)
+
+  </script>
+</body>
+</html>
