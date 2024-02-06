@@ -1,4 +1,4 @@
-const API_KEY = `AIzaSyBuBKfs4MHbSdcrnL0F249dZOs5gvSuVH`;
+const API_KEY = ``;
 let videoDataBox=[];
 const videoListBox =  document.querySelector('.video-list');
 const searchInput = document.querySelector('#search');
