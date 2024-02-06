@@ -10,6 +10,7 @@
 `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=검색결과수&regionCode=kr&key=${API_KEY}`
 
 
-https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=css&key=AIzaSyC45SbIl5DctAfz-puEfFXqVS-IUUY7KHM
 
+
+https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=30&regionCode=kr&key=${API_KEY}
 
