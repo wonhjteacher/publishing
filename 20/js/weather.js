@@ -1,4 +1,4 @@
-const API_KEY='970a4f3a1e0b5d4d9123b0599621e2c9';  // 본인 api 넣기 
+const API_KEY='본인api키넣기';  // 본인 api 넣기 
 const country = document.querySelector('#country');
 const area = document.querySelector('#area');
 const currentTemp = document.querySelector('#currentTemp');
