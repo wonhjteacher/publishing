@@ -1,12 +1,16 @@
-const API_KEY=`AIzaSyBuBKfs4MHbSdcrnL0F249dZOs5gvSuVHo`;
+const API_KEY=`자신의 api값을 넣으세요`;
 let videoDataBox=[];
 const videoListBox =  document.querySelector('.video-list');
 const searchInput = document.querySelector('#search');
 const searchBtn = document.querySelector('#searchBtn')
 //검색창에서 검색 시 검색 결과 불러오는 함수 
-const getSearchVideo  = () => {
-
-
+const getSearchVideo  = async() => {
+  let keyword = searchInput.value;
+  let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${keyword}&key=${API_KEY}`;
+  let response = await fetch(url) ;
+  let searchData = await response.json() ;
+  videoDataBox = searchData.items;
+  render();
 }
 
 //비디오 리스트를 불러오는 함수 
@@ -38,4 +42,14 @@ const render  = () =>{
 }
 
 videoList(); // 비디오리스트 호출 
+searchBtn.addEventListener('click',getSearchVideo);
+searchInput.addEventListener('keydown',(e)=>{
+  if(e.key === 'Enter'){
+    getSearchVideo();
+  }
+})
 
+/* searchInput.addEventListener('keydown',e=>{
+  if(e.key === 'Enter') getSearchVideo();
+})
+ */
