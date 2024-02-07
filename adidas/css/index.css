@@ -66,10 +66,7 @@
   bottom:15px
 }
 #header .header-contents nav{
- /*  position:  absolute; */
- /*  bottom:0;
-  left:50%;
-  transform: translateX(-60%); */
+  
 }
 #header .header-contents .gnb{
   display: flex;
@@ -96,9 +93,43 @@
   left:0;
   top:48px;
   width: 100%;
-  background-color: var(--primary--white);
-  z-index: 100;
+ background-color: var(--primary--white); 
 }
+.dep2-center-area{
+  padding: 40px 20px 0 20px;
+  margin: auto;
+}
+.dep2-links{
+  display: flex;
+}
+.dep2-links>li{
+  flex:1 1 0;
+}
+.dep2-links>li>a{
+
+}
+.link-all-view-box{
+  padding: 0 20px;
+  border-top:1px solid var(--neutral--neutral-300);
+  background-color:var(--primary--white);
+}
+.link-all-view-box .dep2-center-area{
+  padding-top: 0;
+}
+.link-all-view-list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-all-view-list>li{
+  padding: 10px 0 14px 0;
+  color:var(--primary--black);
+  font-size: var(--body--large--text-6xl--semibold);
+  font-weight: bold;
+  flex:1 1 0;
+
+}
+.link-all-view-list>li>a{display: block}
 /* 해더의 검색창과 상단 유틸액션 아이콘  */
 #header .header-contents .header-utility-box{
   display: flex;
@@ -141,3 +172,5 @@
 .search-box .btn-search{
   width: 24px;height: 24px;background: url(../img/ui_img/search_sm.png) no-repeat center;font-size: 0;
 }
+
+video{width: 100%;}
