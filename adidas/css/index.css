@@ -53,22 +53,52 @@
 
 #header .header-contents{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+  justify-content: flex-end;
+  position: relative;
+  height: 48px;
 }
 #header .header-contents .logo{
   width:90px;height: 48px;
   background: url(../img/ui_img/logo1.png) no-repeat center;
   text-indent: -9999px;
+  position: absolute;
+  left:48px;
+  bottom:15px
+}
+#header .header-contents nav{
+ /*  position:  absolute; */
+ /*  bottom:0;
+  left:50%;
+  transform: translateX(-60%); */
 }
 #header .header-contents .gnb{
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
   padding: 0 10px;
 }
-.dep2-bg-box{display: none;}
+#header .header-contents .gnb>li{
+  font-size: var(--body--large--text-6xl--bold);
+  color:var(--neutral--neutral-900);
+  font-weight: 600;
+  padding: 0 6px;
+  height: 48px;
+}
+#header .header-contents .gnb>li.dep1-type-1{
+  color:var(--neutral--neutral-400);
+  font-weight: 400;
+}
+#header .header-contents .gnb>li>a{display:block;padding:12px 0;line-height:24px}
+#header .header-contents .gnb>li:hover>a{border-bottom:3px solid var(--neutral--neutral-900)}
+
+.dep2-bg-box{
+  position: absolute;
+  left:0;
+  top:48px;
+  width: 100%;
+  background-color: var(--primary--white);
+  z-index: 100;
+}
 /* 해더의 검색창과 상단 유틸액션 아이콘  */
 #header .header-contents .header-utility-box{
   display: flex;
