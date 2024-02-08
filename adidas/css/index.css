@@ -224,3 +224,15 @@
 }
 
 video{width: 100%;}
+#videoBox{position: relative;}
+.video-summary-box{
+  position: absolute;bottom: 84px;left:102px;
+  height: 360px;
+  z-index:50 ;
+  
+}
+.video-summary-box .banner-title-box{position: absolute;top:0}
+.video-summary-box .banner-des{font-size: 21px;color:var(--primary--white);font-weight: 500;
+margin: 16px 0 20px 0;letter-spacing: -1px;}
+.video-summary-box .btn-video-control{position:absolute;bottom:0;display: flex;gap:16px}
+.video-summary-box .btn-video-control button{cursor: pointer;}
