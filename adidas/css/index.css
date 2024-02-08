@@ -240,6 +240,7 @@ margin: 16px 0 20px 0;letter-spacing: -1px;}
 #contentArea{
   padding-top: 48px;
   padding-left: 30px ;
+  padding-right: 30px;
 }
 .product-carousel-1 .carousel-tab-button-area{margin-bottom:32px ;margin-left: 10px;display: flex;gap:8px;}
 .product-carousel-1 .carousel-tab-button-area button{
@@ -256,6 +257,13 @@ margin: 16px 0 20px 0;letter-spacing: -1px;}
   background-color:var(--primary--black);
   color:var(--primary--white)
   }
+  
+.slider-card{
+  border: 1px solid transparent;
+}
+.slider-card:hover{
+  border-color: var(--primary--black);
+}
 .slider-card .card-thumnail-box{
   position: relative;
 }
@@ -289,3 +297,64 @@ margin: 16px 0 20px 0;letter-spacing: -1px;}
   line-height: 20px;
   color:var(--neutral--neutral-500)
 }
+
+
+/* 플러그인 css수정 */
+.swiper-slide{
+  width: 22% !important;
+}
+.swiper-slide img{
+  width: 100%;
+}
+
+.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{
+  bottom: 0;
+  top:auto;
+}
+.product-tab-Swiper{
+  padding-bottom: 36px;
+}
+.swiper-pagination-progressbar{
+  background: var(--neutral--neutral-400,#98A2B3);
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  background: var(--primary--black);
+}
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+  opacity: 0;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev{
+  width: 44px;height: 44px;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next{
+  width: 44px;height: 44px;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+  content: '';
+  background:url(../img/card/arrow-btn-right.png) no-repeat ;
+  width: 44px;
+  height: 44px;
+}
+.swiper-button-next:hover:after, .swiper-rtl .swiper-button-prev:hover:after{
+  background-image:url(../img/card/arrow-btn-right-black.png);
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+  content: '';
+  background:url(../img/card/arrow-btn-left.png) no-repeat ;
+  width: 44px;
+  height: 44px;
+}
+.swiper-button-prev:hover:after, .swiper-rtl .swiper-button-next:hover:after{
+  background-image:url(../img/card/arrow-btn-left-black.png);
+}
+
+/* 미디어쿼리 */
+@media (min-width: 1280px){
+  #contentArea{
+    padding-left: 108px ;
+    padding-right:108px;
+  }
+}
+
