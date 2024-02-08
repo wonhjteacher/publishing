@@ -52,9 +52,9 @@
 }
 
 #header .header-contents{
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
+  display: grid;
+  grid-template-columns:1fr 3.4fr 2.63fr ;
+  position: relative;;
   height: 48px;
 }
 #header .header-contents .logo{
@@ -85,7 +85,12 @@
   color:var(--neutral--neutral-400);
   font-weight: 400;
 }
-#header .header-contents .gnb>li>a{display:block;padding:12px 0;line-height:24px}
+#header .header-contents .gnb>li>a{
+  display:block;line-height:24px;
+  display: flex;align-items: center;
+  border:3px solid transparent;
+  height: 48px;
+}
 #header .header-contents .gnb>li:hover>a{border-bottom:3px solid var(--neutral--neutral-900)}
 
 .dep2-bg-box{
@@ -93,7 +98,7 @@
   position: absolute;
   left:0;
   top:48px;
-  width: 100%;
+  width: 100%; 
  background-color: var(--primary--white); 
  z-index: 1000;
 }
@@ -178,6 +183,7 @@
 #header .header-contents .header-utility-box{
   display: flex;
   padding-right: 56px;
+  justify-content: flex-end;
   align-items: center;
   gap:6px;
 }
