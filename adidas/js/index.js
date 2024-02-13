@@ -12,3 +12,14 @@ var swiper = new Swiper(".product-tab-Swiper", {
   },
 
 });
+
+
+var swiper2 = new Swiper(".product-popular-Swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  slidesPerGroup:4,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
