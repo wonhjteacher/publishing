@@ -373,10 +373,49 @@ margin: 16px 0 20px 0;letter-spacing: -1px;}
 
 .product-carousel-2  .swiper{overflow: visible;}
 
+#brand-history{
+  display: flex;
+  gap: 40px;
+  padding: 48px 30px;
+  background-color: #faf8ce;
+  margin-top: 80px;
+}
+#brand-history h2{
+  color:var(--primary--black);
+  font-size:  var(--title--lg--text-6xl--bold);
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 14px;
+}
+#brand-history p{
+  color:var(--neutral--neutral-700);
+  font-size:var(--body--normal--text-6xl--regular) ;
+  line-height: 20px;
+}
+
+#membership-area{
+  background-color: var(--primary--yellow);
+  padding: 40px 30px;
+  text-align: center;
+}
+#membership-area h2{
+  margin-bottom: 14px;
+  color: var(--primary--black);
+  font-size: var(--title--xl--text-6xl--bold);
+  font-weight: 700;
+  line-height: 38px;
+}
+#membership-area p{
+  color: var(--primary--black);
+  font-size:var(--body--large--text-6xl--regular);
+  line-height: 24px; 
+  margin-bottom: 12px;
+}
+
 /* 미디어쿼리 */
 @media (min-width: 1280px){
-  #contentArea{
-    padding-left: 108px ;
+  #contentArea,#brand-history,#membership-area{
+    padding-left: 108px;
     padding-right:108px;
   }
 }
