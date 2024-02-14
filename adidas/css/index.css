@@ -652,10 +652,10 @@ footer{
     #header .header-contents{
       display: none;
     }
-  
+  /* 모바일 메뉴 부분  */
     .mb-header-contents{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 3fr;
       padding: 6px 12px;
     }
     .mb-header-contents button{
@@ -670,5 +670,92 @@ footer{
     .mb-utility-menu{
       justify-self: end;
     }
+    .mb-navi{
+      position: fixed;
+      left:0;top:0;
+      width: 100vw;
+      height: 100vh;
+      background-color:var(--primary--white);
+      z-index: 10000;
+    }
+    .mb-navi>div{padding-top: 60px;padding-bottom: 48px;}
+    .mb-navi>div>h2{
+      position: absolute;
+      top:0;left:0;
+      width: 100%;
+      height: 60px;
+      padding: 6px 0;
+      text-align: center;
+      border-bottom: 1px solid var(--neutral--neutral-300);
+    }
+    .mb-navi>div>h2>img{height: 48px;}
+    .mb-navi>div>h2>.nav-close-btn{
+      width: 48px;
+      height: 48px;
+      padding: 12px;
+      position: absolute;
+      right: 16px;
+    }
+    .mb-depth1{
+      border-bottom: 1px solid var(--neutral--neutral-300);
+    }
+    .mb-depth1>li, 
+    .mb-menu-footer>li{
+      color:var(--primary--black);
+      font-size: var(--title--small--text-6xl--ragular);
+      font-weight: 400;
+      line-height: 28px;
+      padding: 8px 26px;
+    }
+    .mb-depth1>li.bold{
+      font-weight: 600;
+    }
+    .mb-navi .country{
+      border-top: 1px solid var(--neutral--neutral-300);
+      position: absolute;bottom:0;left:0;
+      width: 100%;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      gap:16px;
+      padding:8px 24px ;
+    }
+    .mb-depth2-area, .mb-depth3-area{
+      position: absolute;
+      top:0;left:0;width: 100%;height: 100vh;
+      background-color: var(--primary--white);
+      z-index: 100;
+    } 
+    .mb-depth2-area>h3, .mb-depth3-area>h4{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 16px;
+      border-bottom: 1px solid var(--neutral--neutral-300);
+    }
+    .mb-depth2-area>h3>button,.mb-depth3-area>h4>button{width: auto;height: 48px;}
+    .mb-depth2-area>h3>.navi-prev-btn,.mb-depth3-area>h4>.navi-prev-btn{
+      display: flex;align-items: center;
+      color: var(--primary--black);
+      font-size: var(--title--small--text-6xl--semibold);
+      font-weight: 600;
+      gap:20px;
+    }
+    .mb-depth2>li,.mb-depth3>li{
+      padding:8px 32px 8px 76px;
+      color: #000;
+      font-size: var(--title--small--text-6xl--ragular);
+      font-weight: 400;
+      line-height: 28px; 
+    }
+    /* 모바일 navi 핸들링 css */
+    .mb-navi{left:-100vw;transition: left 0.2s;}
+    .mb-navi.on{left:0}
+    .mb-depth2-area,.mb-depth3-area{left:100vw;opacity: 0;transition: left 0.2s;}
+    .mb-depth2-area.on, .mb-depth3-area.on{left:0;opacity: 1}
 }
 
+/* 
+ 1. 사운드 온오프 off  js
+ 2  모바일 네비게이션 동작 js 
+*/
