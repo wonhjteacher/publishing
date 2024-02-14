@@ -54,6 +54,7 @@
   text-decoration: underline;
 }
 
+.mb-header-contents{display: none;}
 #header .header-contents{
   display: grid;
   grid-template-columns:1fr 3.4fr 2.63fr ;
@@ -647,6 +648,27 @@ footer{
       grid-template-rows:auto auto auto;
       row-gap: 80px;
     }
-
+    #header .header-top-menu,
+    #header .header-contents{
+      display: none;
+    }
+  
+    .mb-header-contents{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 6px 12px;
+    }
+    .mb-header-contents button{
+      width: 48px;height: 48px;
+      padding: 12px;
+    }
+    .mb-header-contents .mb-logo {
+      justify-self: center;
+      align-self: center;
+    }
+    .mb-header-contents .mb-logo img{width: 50px;}
+    .mb-utility-menu{
+      justify-self: end;
+    }
 }
 
