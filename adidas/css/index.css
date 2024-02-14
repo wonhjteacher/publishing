@@ -226,7 +226,7 @@
   width: 24px;height: 24px;background: url(../img/ui_img/search_sm.png) no-repeat center;font-size: 0;
 }
 
-video{width: 100%;}
+video{width: 100vw;}
 #videoBox{position: relative;}
 .video-summary-box{
   position: absolute;bottom: 84px;left:102px;
@@ -239,6 +239,15 @@ video{width: 100%;}
 margin: 16px 0 20px 0;letter-spacing: -1px;}
 .video-summary-box .btn-video-control{position:absolute;bottom:0;display: flex;gap:16px}
 .video-summary-box .btn-video-control button{cursor: pointer;}
+.video-summary-box .btn-video-control .btn-play{
+  background: url(../img/banner/pause-circle.png) no-repeat;
+  width: 48px;height: 48px;
+  font-size: 0;
+}
+.video-summary-box .btn-video-control .btn-play.stop{
+  background-image : url(../img/banner/play-circle.png);
+  font-size: 0;
+}
 
 #contentArea{
   padding-top: 48px;
@@ -558,10 +567,25 @@ footer{
 }
 
 /* 미디어쿼리 */
-@media (min-width: 1280px){
+@media screen and (max-width:1920px) and (min-width: 1280px){
   #contentArea,#brand-history,#membership-area{
     padding-left: 108px;
     padding-right:108px;
   }
+}
+
+@media screen and (max-width :767px){
+  #contentArea,#brand-history,#membership-area{
+    padding-left: 20px;
+    padding-right:20px;
+  }
+  video{
+    width: auto;
+    height: 144.444vw;
+  }
+  .video-summary-box{
+    bottom:30px;left:30px; height: 222px;
+   }
+   .video-summary-box .banner-heading img{width: 270px;}
 }
 

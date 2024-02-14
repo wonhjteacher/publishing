@@ -61,6 +61,20 @@ depth1.forEach(function(ele){
   })
 
 })
+/* 비디오 컨트롤 */
+const vid = document.querySelector('#adidasVideo');
+const btnPlay = document.querySelector('.btn-play');
+
+btnPlay.addEventListener('click',function(){
+  let value = btnPlay.classList.contains('stop');
+  if(value){
+    btnPlay.classList.remove('stop')
+    vid.play();
+  }else{
+    btnPlay.classList.add('stop')
+    vid.pause()
+  }
+})
 
 
 
