@@ -434,6 +434,7 @@ footer{
   align-items: center;
   flex-wrap: wrap;
 }
+.mb-footer-menu-list{display: none;}
 .footer-menu-list{
   display: flex;gap:16px;
   max-width:1120px;
@@ -587,5 +588,65 @@ footer{
     bottom:30px;left:30px; height: 222px;
    }
    .video-summary-box .banner-heading img{width: 270px;}
+   .product-carousel-1 .carousel-tab-button-area{
+      flex-wrap: wrap;
+   }
+   .swiper-slide{
+     width:50% !important;
+   }
+   .product-carousel-2  .swiper-slide{
+    width: 75% !important;
+   }
+   #brand-history{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+   }
+   footer{
+    margin-top: 0;
+   }
+   #footerMenu{
+    background-color: var(--primary--black);
+   }
+   .mb-footer-menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .mb-footer-menu-list>li{
+      width: 50%;text-align: center;
+      color:var(--primary--white);
+      margin:12px 0;
+    }
+    .footer-menu-list{display: none;}
+    
+    .footer-cms,.footer-email{
+      width: 100%;
+      color:var(--primary--white)
+    }
+    #footerAddress{
+      background-color: var(--neutral--neutral-700);
+      margin-top:0px;
+    }
+    .privacy-menu{
+      flex-wrap: wrap;
+    }
+    .privacy-menu>li{
+      width: 50%;
+      margin: 8px 0;
+      text-align: center;
+    }
+    .privacy-menu>li::after{
+      display: none;
+    }
+
+    .notice-modal-contents-box{
+      width: 100%;
+    }
+    .notice-modal-list{
+      grid-template-columns: 100%;
+      grid-template-rows:auto auto auto;
+      row-gap: 80px;
+    }
+
 }
 

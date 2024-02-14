@@ -10,6 +10,14 @@ var swiper = new Swiper(".product-tab-Swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+   
+    767: {
+      slidesPerView: "auto",
+      spaceBetween: 6
+    },
+  
+  }
 
 });
 
@@ -22,6 +30,14 @@ var swiper2 = new Swiper(".product-popular-Swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  breakpoints: {
+
+    767: {
+      slidesPerView: "auto",
+      spaceBetween: 12
+    },
+  
+  }
 });
 
 /* 공지모달 처리 */ 
