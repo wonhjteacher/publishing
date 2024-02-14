@@ -245,11 +245,17 @@ margin: 16px 0 20px 0;letter-spacing: -1px;}
   width: 48px;height: 48px;
   font-size: 0;
 }
-.video-summary-box .btn-video-control .btn-play.stop{
-  background-image : url(../img/banner/play-circle.png);
+.video-summary-box .btn-video-control .btn-sound{
+  background: url(../img/banner/volume-circle-on.png) no-repeat;
+  width: 48px;height: 48px;
   font-size: 0;
 }
-
+.video-summary-box .btn-video-control .btn-play.stop{
+  background-image : url(../img/banner/play-circle.png);
+}
+.video-summary-box .btn-video-control .btn-sound.play{
+  background-image: url(../img/banner/volume-circle.png);
+}
 #contentArea{
   padding-top: 48px;
   padding-left: 30px ;
@@ -711,6 +717,7 @@ footer{
       font-weight: 600;
     }
     .mb-navi .country{
+      background-color: var(--primary--white);
       border-top: 1px solid var(--neutral--neutral-300);
       position: absolute;bottom:0;left:0;
       width: 100%;
@@ -748,11 +755,14 @@ footer{
       font-weight: 400;
       line-height: 28px; 
     }
+    .mb-depth1>li.icon-on,.mb-depth2>li.icon-on{
+      background: url(../img/ui_img/chevron-right.png) no-repeat right 32px center;
+    }
     /* 모바일 navi 핸들링 css */
     .mb-navi{left:-100vw;transition: left 0.2s;}
     .mb-navi.on{left:0}
-    .mb-depth2-area,.mb-depth3-area{left:100vw;opacity: 0;transition: left 0.2s;}
-    .mb-depth2-area.on, .mb-depth3-area.on{left:0;opacity: 1}
+    .mb-depth2-area,.mb-depth3-area{left:200vw;transition: left 0.4s;}
+    .mb-depth2-area.on, .mb-depth3-area.on{left:0;}
 }
 
 /* 
