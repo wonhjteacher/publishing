@@ -3,9 +3,31 @@
  <head>
   <meta charset="UTF-8">
   <title>Document</title>
-
+  <style>
+    .text-color{color:red}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('h2').on('click',function(){
+        $(this).toggleClass('text-color');
+        let value = $(this).hasClass('text-color');
+        console.log(value)
+      })
+    })//jQ
+  </script>
  </head>
  <body>
  <h2>제목용 태그</h2>
  </body>
 </html>
+
+<!-- 
+ css({속성,값}) 
+ addClass('클래스명') 대상에 해당 클래스 적용
+ removeClass('클래스명')  대상에 해당 클래스 삭제
+ toggelClass('클래스명')  대상에 해당 클래스 적용 삭제 토글
+ hasClass('클래스명') 대상 해당클래스 있는지 확인 있으면 true 없으면 false 리턴
+ -->
+
+
