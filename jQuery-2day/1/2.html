@@ -8,6 +8,30 @@
   <title>Document</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <link href="css/02.css" rel="stylesheet" type="text/css">
+	<script>
+			$(function(){
+				//dl 의 뒤에 동적으로 마트업 추가  새로운 div 생성 되게 한다. 
+				 $('dl').after('<div id="greyLayer"></div><div id="overLayer"></div>')
+				 // # 1 . dt 클릭시
+				 // #greyLayer show()  #overLayer show() 시켜야한다. 
+				 // 클릭한 dt 다음에 오는 dd 의 text 를 가져와서 overLayer의 텍스트로 넣어준다. 
+				 //  #2 #greyLayer 
+				 // 열려있는 모달 창들이 닫힌다.  #greyLayer ,  #overLayer  hide()
+				$('dt').on('click',function(){
+					let ddText = $(this).next('dd').text();
+					$('#greyLayer').show();
+					$('#overLayer').show().text(ddText).css({
+						'transform':'translateY(-50%)'
+					});
+				})
+
+				$('#greyLayer').on('click',function(){
+					$('#greyLayer').hide();
+					$('#overLayer').hide();
+				})
+				
+			}) //jQ
+	</script>
  </head>
  <body>
 <dl>
@@ -38,3 +62,10 @@
 
  </body>
 </html>
+
+<!-- 
+ 요소 추가 메서드 
+ 대상.after(추가될 요소)  대상 뒤에 요소를 추가한다. 대상의 형제요소로 추가 
+ 대상.before(추가될 요소)  대상 앞에 요소를 추가한다. 대상의  형제요소로 추가 
+
+ -->
