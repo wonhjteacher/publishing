@@ -1,0 +1,21 @@
+
+.sliderWrap{width:600px;height:200px;margin:20px auto;
+border-bottom:3px solid #333;position:relative;
+overflow:hidden;}
+
+.sliderWrap .slider{position:absolute;top:0;left:0;display: flex;}
+.sliderWrap .slider img{}
+
+.box-wrapper{width:600px;margin:0 auto;display: flex;}
+.box{
+  width:200px;height:200px;
+  background:url('../img/box.png');
+}
+.box.open{/*제이쿼리에서 addClass*/
+  background:url('../img/open.png');
+}
+
+
+
+
+
