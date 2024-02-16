@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
 </head>
 <body>
   <div id="box1" style="border:3px solid red;width:400px;height:200px;margin:20px">
@@ -18,5 +20,15 @@
 		<li>2</li>
 	 </ul>
  </div>
+ <script>
+    $('#box1').remove();
+    $('#box2').empty();
+
+ </script>
 </body>
 </html>
+<!-- 
+요소를 삭제하는 메서드 
+remove()  대상요소 자체를 삭제
+empty()  대상요소의 하위요소를 삭제 (비운다의 개념)
+ -->
