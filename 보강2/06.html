@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>클릭미</button>
+  <script>
+     const button = document.querySelector('button');
+     const body = document.querySelector('body');
+     button.addEventListener('click',()=>{
+        requestAnimationFrame(()=>{
+          body.style.backgroundColor = 'red';
+        });
+        requestAnimationFrame(()=>{
+          body.style.backgroundColor = 'green';
+        });
+        requestAnimationFrame(()=>{
+          body.style.backgroundColor = 'blue';
+        });
+     })
+  </script>
+</body>
+</html>
