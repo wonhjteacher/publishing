@@ -73,4 +73,18 @@ $('.slider1 img').height(winHeight+(winHeight*0.3));
    $('.pause').on('click',function(){
      $('.slider2').slick('slickPause')
    })
+
+    /*gnb*/
+    $('.gnb').on('mouseenter',function(){
+      $('.header').addClass('on');
+      $('.gnb_bg').stop().slideDown();
+      $('.dep2').stop().slideDown();
+    })
+    $('#pop_notice,.section,.util,#logo').on('mouseenter',function(){
+      $('.header').removeClass('on');
+      $('.gnb_bg').stop().slideUp();
+      $('.dep2').stop().slideUp();
+    })
+
+
 })//jQ
