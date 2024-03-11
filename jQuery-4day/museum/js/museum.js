@@ -85,6 +85,4 @@ $('.slider1 img').height(winHeight+(winHeight*0.3));
       $('.gnb_bg').stop().slideUp();
       $('.dep2').stop().slideUp();
     })
-
-
 })//jQ
