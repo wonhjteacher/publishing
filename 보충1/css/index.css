@@ -209,5 +209,78 @@ header .menu-btn{
   font-size: 4.444vw;
 } 
 /*매장찾기 */
+.shop-area{padding:8.33vw 4.44vw;}
+.shop-area .shop-area-title{
+  font-weight: 500;
+  color:#00a1df;
+  font-size:8.611vw;
+  text-align: center;
+  line-height: 1.15;
+}
+.shop-area .shop-area-title-sub{
+  text-align: center;
+  color: #666;
+  font-size: 4.861vw;
+  margin: 9.0277vw 0 8.75vw;
+}
+.shop-list{
+  padding:7.777vw 9.722vw 6.666vw 10vw;
+}
+.shop-area dt{
+ font-size: 5.138vw;
+ color:#fff;
+ background-color: #afafaf;
+ width:34.444vw ;
+ height: 7.777vw;
+ line-height: 7.777vw;
+ text-align: center;
+ margin-bottom:5.833vw ;
+}
+.shop-list dd{
+  font-size:3.333vw ;
+  color:#666;
+  padding-right: 3.333vw;
+  padding-left: 3.333vw;
+  position: relative;
+  display: inline-block;
+}
+.shop-list dd:first-of-type{padding-left: 0;}
+.shop-list dd:last-of-type{padding-right: 0;}
+.shop-list dd::after{
+  content: "";background-color: #666;
+  position:absolute;
+  right: 0;
+  top:0;
+  width: 1px;
+  height: 100%;
+}
+.shop-list dd:last-child::after{display: none;}
 
+.opening-hours{
+  padding:9.166vw 9.722vw 10.555vw 10vw;
+}
+.opening-hours dt{width:22.5vw ;}
+.opening-hours dd{font-size: 3.333vw;color:#666;margin-bottom:1.944vw;line-height: 1;}
+.opening-hours dd span.day{font-weight: 500;position: relative;
+padding-right: 3.333vw;margin-right: 3.333vw;}
+.opening-hours dd span.time{font-weight: 400;}
+.opening-hours dd span.day::after{
+  content:"";display: block;
+  position: absolute;
+  background-color: #666;
+  right: 0;top:50%;transform:translateY(-50%);width: 1px;height: 3.333vw;
+}
+.shop-area .shop-search-btn{
+  width: 46.94vw;height: 15.83tw;line-height: 15.83vw;color:#fff;background-color: #00a1df;
+  margin: 0 auto 13.88vw;text-align: center;font-size: 4.444vw;
+}
+
+.shop-list-box{margin: 0 3.888vw;}
+.shop-list-box li {position: relative;}
+.shop-list-box li img{width: 100%;}
+.shop-list-box li .shop-list-title{
+  position: absolute;top:2.5vw;right:2.777vw;
+  background-color: #00a1df;font-size: 2.777vw;padding:1.388vw 2.222vw;
+  color:#fff
+}
 /* 푸터 */
